@@ -1,0 +1,22 @@
+<ion-view view-title="list">
+  <ion-content>
+    <div class="listContainer">
+      <div class="tabContainer">
+        <div class="listTab" id='timeTab'>
+          <h2>by Time</h2>
+        </div>
+        <div class="listTab" id='distanceTab'>
+          <h2>by Distance</h2>
+        </div>
+      </div>
+      <ion-list>
+        <ion-item ng-repeat="listItem in list" href="#/app/list/{{listItem.id}}">
+            <h2>{{listItem.title}}</h2>
+            <h3>{{listItem.showtimes[0].dateTime.split('').slice(listItem.showtimes[0].dateTime.split('').length-5, listItem.showtimes[0].dateTime.split('').length).join('')}}</h3>
+        </ion-item>
+      </ion-list>
+    </div>
+
+
+  </ion-content>
+</ion-view>

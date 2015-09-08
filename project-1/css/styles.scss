@@ -1,0 +1,163 @@
+.ball {
+  width: 101px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  float: left;
+  margin-top: -4px;
+  margin-left: 354px;
+  border-radius: 50%;
+  z-index: 2; }
+
+
+.squareTest {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: relative;
+  margin-top: 125px; }
+
+.holder {
+  width: 1000px;
+  height: 900px;
+  background-color: gray;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
+
+.bouncer.ui-draggable-dragging {
+  background-color: #82A3A3; }
+
+.board {
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 100px;
+  width: 770px;
+  height: 770px;}
+
+.announceWon {
+  position: absolute;
+  margin-left: 410px;
+  margin-top: 314px;
+  width: 400px;
+  height: 300px;
+  background-image: url('win2.png');
+  z-index: 1;
+}
+
+.announceLost {
+  position: absolute;
+  margin-left: 410px;
+  margin-top: 314px;
+  width: 400px;
+  height: 300px;
+  background-image: url('lost.png');
+  z-index: 1;
+}
+
+.playAgain {
+  position: absolute;
+  margin-left: 580px;
+  margin-top: 535px;
+  z-index: 2;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-color: #00B28F;
+  margin-left: 0px;
+  margin-left: 0px; }
+
+.win {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #FFCCFF;
+  margin: 25px 25px 25px 25px;}
+
+.selected {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #FF0066;
+  border: 3px solid white;
+  margin: 17px 19px 19px 17px;}
+
+.won {
+  background-image: url('explosion.png');
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0px;
+  border: 0px;}
+
+
+.blank {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 0px;
+  margin-left: 0px; }
+
+.bouncerForward {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #FAAC58;
+  position: absolute;
+  margin: 300px 0px 0px 50px; }
+
+.bouncerBack {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #91B5B5;
+  position: absolute;
+  margin: 400px 0px 0px 50px; }
+
+#draggableHelperForward {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #FAAC58;
+  position: relative;
+  margin: 300px 0px 0px 50px; }
+
+#draggableHelperBack {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #91B5B5;
+  position: relative;
+  margin: 400px 0px 0px 50px; }
+
+.bounceForward {
+  background-image: url('bounceForward.png');
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-left: 0px; }
+
+.bounceBack {
+  background-image: url('bounceBack.png');
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-left: 0px; }
+
+p {
+  font-size: 40px;
+  font-weight: bolder;
+  position: relative;
+  margin: 7px 0px 0px 24px; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,14 @@
+{
+  "name": "basic_routing",
+  "version": "1.0.0",
+  "description": "my first app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jack",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

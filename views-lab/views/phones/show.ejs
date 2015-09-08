@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/main.css" media="screen" title="no title" charset="utf-8">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+    <h1><%=phone.name%> --- <%=phone.color%></h1>
+
+    <div id="delete">Delete Now!</div>
+
+
+    <div class="deletethang">
+      <h3>Are you sure you would like to delete this Phone?</h3>
+      <form class="deleteForm" action="/phones/<%=phone.id%>" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input class = "deleteButton" type="submit"> Delete this phone</input>
+
+      </form>
+    </div>
+
+    <script src="/javascripts/skateboardViews.js" charset="utf-8"></script>
+  </body>
+</html>

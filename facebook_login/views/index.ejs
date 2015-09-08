@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <p>
+      You are Authenticated with Facebook
+    </p>
+    <h1>Hello, I'm <%=user.displayName%></h1>
+    <h2><%=user._json.birthday%></h2>
+    <h2><%=user._json.location.name%></h2>
+    <img src="<%=user.photos[0].value%>" alt="" />
+  </body>
+</html>

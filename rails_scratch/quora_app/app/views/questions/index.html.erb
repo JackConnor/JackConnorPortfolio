@@ -1,0 +1,9 @@
+<h1>Questions#index</h1>
+<p>Find me in app/views/questions/index.html.erb</p>
+<%= link_to "make new", "/questions/new" %>
+<ul>
+  <% @questions.each do |t| %>
+  <li><%= t.title%></li>
+  <li><%= t.body%></li>
+  <% end %>
+</ul>

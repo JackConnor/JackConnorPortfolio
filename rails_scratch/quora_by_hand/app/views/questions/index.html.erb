@@ -1,0 +1,7 @@
+<h1>Questions Index</h1>
+<ul>
+  <%= Question.all.each do |x| %>
+    <li><%= x.title %></li>
+    <li><%= x.body %></li>
+    <% end %>
+</ul>

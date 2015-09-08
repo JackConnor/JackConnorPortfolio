@@ -1,0 +1,9 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<div class="">
+  <% @posts.each do |p| %>
+  <div class="">Title:<%= link_to "#{p.title}", post_path(p) %></div>
+  <div class=""><%=p.body%></div>
+  <% end %>
+</div>

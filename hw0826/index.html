@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app='glennApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Glenn's Kendama Api</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    {{1+2}}
+    <div class="nameContainer" ng-controller='nameController as name'>
+      <h2>first and last name</h2>
+        <div ng-repeat="el in name.nameArray">
+          <h2>{{el.first_name}} {{el.last_name}}</h2>
+        </div>
+
+    </div>
+
+    <div class="nameIdContainer" ng-controller="nameIdController as nameId">
+        <div ng-repeat="el in nameId.datum">
+          <h2>{{el.first_name}} {{el.id}}</h2>
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" charset="utf-8"></script>
+    <script src="scripts.js" charset="utf-8"></script>
+  </body>
+</html>

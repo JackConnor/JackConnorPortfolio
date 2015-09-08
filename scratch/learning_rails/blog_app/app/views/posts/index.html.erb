@@ -1,0 +1,12 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<div class="all_posts">
+  <ul>
+    <% @posts.each do |p| %>
+    <li><%= p.trick %></li>
+    <li><img height="200px" width="200px" src="<%= p.url %>" alt="" /></li>
+    <% end %>
+  </ul>
+
+</div>

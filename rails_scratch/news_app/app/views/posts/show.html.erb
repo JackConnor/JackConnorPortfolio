@@ -1,0 +1,16 @@
+<h1><%=@post.title %></h1>
+<p><%=@post.body %></p>
+
+<div class="comments">
+  <p><% @post.comments.each do |c| %></p>
+  <p><%= c.body %></p>
+  <% end %>
+</div>
+
+<div class="">
+  <%=form_for [@post, Comment.new] do |f|%>
+  <%= f.label :body, "new comment"%>
+  <%= f.text_area :body %>
+  <%= f.submit "Submit Comment"%>
+  <% end %>
+</div>

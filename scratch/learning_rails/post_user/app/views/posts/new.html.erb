@@ -1,0 +1,10 @@
+<h1>Posts#new</h1>
+<p>Find me in app/views/posts/new.html.erb</p>
+
+<%= form_for :post do |p| %>
+  photo: <%= p.text_field :url %>
+  trick: <%= p.text_field :trick %>
+  skater: <%= p.text_field :skater %>
+  userID: <%= p.text_field :id_user %>
+<%=p.submit %>
+<%end%>

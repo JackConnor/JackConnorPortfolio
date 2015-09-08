@@ -1,0 +1,51 @@
+body{
+	text-align: center;
+}
+ul{
+	list-style-type: none;
+}
+.btn{
+	margin: 20px;
+}
+
+#delete {
+	background-color: red
+}
+
+.deletethang {
+	margin-left: -2000px;
+}
+
+.all-phones {
+	width: 60%;
+	margin: 0 auto;
+	outline: 2px solid green;
+}
+
+.show {
+	margin-left: -2000px;
+	height: 300px;
+	width: 300px;
+	outline: 2px solid blue;
+}
+
+.backShow {
+	background-color: blue;
+	width: 100px;
+	height: 100px
+}
+
+.newph {
+	height: 40px;
+	width: 100px;
+	background-color: green;
+	color: white;
+}
+
+.newPhone {
+	width: 300px;
+	height: 300px;
+	outline: 3px solid red;
+	margin-left: -2000px;
+	margin-top: -425px;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bookstore</title>
+  </head>
+  <body>
+    <h1>Welcome to the Bookstore Vanilla</h1>
+  </body>
+  <script type="text/javascript">
+    var myRequest = new XMLHttpRequest();
+
+    myRequest.addEventListener('load', function(){console.log(this)});
+    myRequest.open("get", "http://localhost:3000/books");
+    myRequest.send();
+  </script>
+</html>

@@ -1,0 +1,7 @@
+<h1>Log Your Sorry Ass In</h1>
+
+<%= form_tag sessions_path do |f| %>
+email: <%= f.text_field :email %>
+Password: <%=f.password_field :password %>
+<%= f.submit "login" %>
+<% end %>

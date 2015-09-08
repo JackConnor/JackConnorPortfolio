@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html data-ng-app="quotesApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Test</title>
+    <script src="angular.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="" data-ng-controller="quotesController as qc">
+      <h3>Some memorable quotes are: {{qc.quotesArray}}</h3>
+      <button ng-click="qc.addBoom()"></button>
+    </div>
+
+
+
+    <script type="text/javascript">
+      // console.log(angular);
+      //creating an app module by passing it the name and list of dependencies
+      var qApp = angular.module("quotesApp", []);
+      // console.log(qApp);
+      // console.log(qApp.name);
+      // console.log(qApp.controller);
+      qApp.controller("quotesController", quotesControllerFunc);
+
+      function quotesControllerFunc(){
+        var self = this;
+        console.log("an instance of me was created");
+        this.myText = "Simon is the best";
+        this.quotesArray = ['boom', 'banana', 'dont worry bout it'];
+        var addBoom = function(){
+          self.quotesArray.push('boom');
+        }
+        this.addBoom = addBoom;
+      }
+    </script>
+  </body>
+</html>

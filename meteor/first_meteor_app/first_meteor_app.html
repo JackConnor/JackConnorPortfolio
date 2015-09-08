@@ -1,0 +1,38 @@
+<head>
+  <title>first_meteor_app</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor hell yea!</h1>
+    {{>balls}}
+    {{>insertBook}}
+    {{>booksList}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template id="" name="booksList">
+  <ul>
+    {{#each allBooks}}
+      <li>{{this.name}}</li>
+    {{/each}}
+  </ul>
+</template>
+
+<template id="" name='balls'>
+  <input type="range" id="moveBall">
+  <svg>
+    <circle r=10 cx={{ball.x}} cy=30></circle>
+    <!-- <circle r=10 cx={{ballX}} cy=30></circle>
+    <circle r=10 cx={{ballX}} cy=30></circle> -->
+  </svg>
+
+</template>
+
+<template id="" name='insertBook'>
+  <input type="text" name="name" value="" class="bookTitle">
+  <button>Click Here</button>
+</template>

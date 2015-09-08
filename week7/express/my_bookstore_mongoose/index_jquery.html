@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to the bookstore</h1>
+    <form class="my-form" id="book-form" method="POST">
+      <input type="text" name="name" placeholder="new book here">
+      <div id="btn"><input type="submit" value="Submit">
+    </form></div>
+
+
+    <ul class="ulResults"></ul>
+    <div class="button"></div>
+    <script type="text/javascript">
+        var divResults = $(".results");
+        var bookForm = $('.my-form').on('submit',     function(event) {
+          event.preventDefault();
+          $.ajax({
+            method: 'post'
+            , data: JSON.stringify({name: event.target.name.value})//sending name that's input to box, JSON.stringify so we can send ti as json
+            , contentType: 'application/json; charset=UTF-8'
+            , dataType   : 'json'
+            , url: 'http://localhost:3000/books'
+            , success: function(data) {
+              console.log(data);//if I can make this work, I can append to the list
+              $('.ulResults').append("<li>You just created "+data.name+"<form action='/books' method='post'><input type='hidden' name='_method' value='DELETE'><button type='submit'>Delete Board</button></form></li>")
+            }
+            , error: function(err){console.log(err)}
+          })
+        })
+
+
+        //   $.ajax({
+        //     method: 'get'
+        //     , url: "http://localhost:3000/books"
+        //     , success: function(returnedData) {
+        //       console.log("this book should be: "+returnedData.last.name);
+        //         $('.ulResults').append("<li>"+returnedData.last.name+"</li>")
+        //     }
+        //   })
+
+        //
+
+
+
+        $.ajax({
+          method: 'get'
+          , url: "http://localhost:3000/books"
+          , success: function(returnedData) {
+            console.log("last book should be: "+returnedData[returnedData.length-1].name);
+            $('.button').on('click', function(){
+              $('.ulResults').append("<li>"+returnedData[returnedData.length-1].name+"</li>");
+              console.log('last book is: '+returnedData[returnedData.length-1].name);
+            })
+            // $('.ulResults').append("<li>"+returnedData[returnedData.length-1].name+"</li>")
+          }
+        })
+
+
+
+    </script>
+  </body>
+</html>
