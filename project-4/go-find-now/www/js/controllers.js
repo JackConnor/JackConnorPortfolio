@@ -46,19 +46,26 @@ angular.module('starter.controllers', [])
 
   $(function(){
     //begin jquery
-    $('.mapContainer').on('swipeleft', function(){
+    $scope.swiperList = function(){
+      $('.movie').css('background-color', 'green');
+      console.log("swiped from list page");
+      window.location.href ="/#/app/map";
+    }
+
+    $scope.swiperMap = function(){
       $('.mapContainer').css('background-color', 'green');
       console.log("panning");
-      // window.location.href ="/#/list"
-      $location.url("/#/list");
-    })
-
-    $('.listContainer').on('swipeleft', function(){
-      console.log('swipe worked');
-      $('.movie').css('background-color', 'green')
-      // window.location.href = '/#/app/map';
-      $location.url("/#/app/map");
-    })
+      window.location.href ="/#/list";
+    }
+      // $location.url("/#/list");
+    // })
+    //
+    // $('.tabContainer').on('click', function(){
+    //   console.log('swipe worked');
+    //   $('.movie').css('background-color', 'green')
+    //   window.location.href = '/#/app/map';
+    //   // $location.url("/#/app/map");
+    // })
 
     //end jquery iife
   })
