@@ -10,7 +10,7 @@
         </div>
       </div>
       <ion-list>
-        <ion-item ng-repeat="listItem in list" href="#/app/list/{{listItem.id}}">
+        <ion-item class="movie" ng-repeat="listItem in list" href="#/app/list/{{listItem.id}}">
             <h2>{{listItem.title}}</h2>
             <h3>{{listItem.showtimes[0].dateTime.split('').slice(listItem.showtimes[0].dateTime.split('').length-5, listItem.showtimes[0].dateTime.split('').length).join('')}}</h3>
         </ion-item>

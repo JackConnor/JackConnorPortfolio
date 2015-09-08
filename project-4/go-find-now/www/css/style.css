@@ -1,12 +1,9 @@
 /* Empty. Add your own CSS if you like */
 
 
-.mapContainer {
-  width: 90%;
-  height: 800px;
-  margin: 5% 0 0 5%;
-  outline: 2px solid black;
-    position: absolute;
+
+.listContainer {
+  z-index: 2;
 }
 
 .listTab {
@@ -16,6 +13,14 @@
   border-top: 2px solid black;
   border-right: 2px solid black;
   border-left: 2px solid black;
+}
+
+.mapContainer {
+  width: 90%;
+  height: 800px;
+  margin: 5% 0 0 5%;
+  outline: 2px solid black;
+    position: absolute;
 }
 
 .tabContainer {

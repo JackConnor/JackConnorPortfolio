@@ -41,18 +41,23 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('mapCtrl', function($scope, $http) {
+.controller('mapCtrl', function($scope, $http, $location) {
   var map;
 
   $(function(){
     //begin jquery
     $('.mapContainer').on('swipeleft', function(){
+      $('.mapContainer').css('background-color', 'green');
       console.log("panning");
-      window.location.href ="/#/app/list"
+      // window.location.href ="/#/list"
+      $location.url("/#/list");
     })
 
     $('.listContainer').on('swipeleft', function(){
-      window.location.href = '/#/pp/map'
+      console.log('swipe worked');
+      $('.movie').css('background-color', 'green')
+      // window.location.href = '/#/app/map';
+      $location.url("/#/app/map");
     })
 
     //end jquery iife
