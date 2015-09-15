@@ -1,0 +1,158 @@
+<head>
+  <title>portfolioMeteor</title>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+<!--<![endif]-->
+
+</head>
+
+<body>
+  <div class="appContainer">
+
+    {{> introHolder}}
+
+  </div>
+  <script src="scripts.js" charset="utf-8"></script>
+</body>
+
+<!--end body and start templates-->
+
+<template name="intro">
+  <div class="introContainer">
+    <div class="introBox">
+      <h1>Jack Connor</h1>
+      <h3>first class web developer, extraordinaire</h3>
+      <br>
+    </div>
+    <h1 class="clickToEnter">Click to Enter</h1>
+  </div>
+</template>
+
+<template name="navbar">
+  <div class="navcontainer">
+    <h1>Portfolio de Jack</h1>
+  </div>
+</template>
+
+<template name="aboutMe">
+  <div class="aboutmecontainer">
+    <h2>Check out some of my projects of the following variety</h2>
+    <div class="imagesContainer">
+      <div class="cat" id="javascript">
+        <img class="category" src="http://www.jayeesha.com/img/expressjs.png" alt="" />
+        <p>
+          text text text text text
+        </p>
+      </div>
+      <div class="cat" id="ruby">
+        <img class="category" src="https://achievement-images.teamtreehouse.com/badges_SimpleFacebook_Stage1.png" alt="" />
+        <p>
+          text text text text text
+        </p>
+      </div>
+      <div class="cat" id="ux">
+        <img class="category" src="https://blog.udemy.com/wp-content/uploads/2014/06/bigstock-Info-text-graphic-experience-56542319-300x300.jpg" alt="" />
+        <p>
+          text text text text text
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="catProject">
+  <div class="catContainer">
+
+  </div>
+</template>
+
+<template name="singleProject">
+  <div class="singleProjectContainer">
+    <div class="pure-g">
+      <div id="project_photo" class="pure-u-md-1-2 pure-u-1-1">
+        <div class="pure-g">
+          <div class="pure-u-4-5 photo_container">
+            <img src="{{data.photo}}"/>
+          </div>
+        </div>
+      </div>
+      <div id="project_info" class="pure-u-md-1-2 pure-u-1-1">
+        <div>
+          <h1>{{data.name}}</h1>
+          <h2>My role: {{data.role}}</h2>
+        </div>
+        <div id="project_description">
+          <h2>Description of the project: {{data.description}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom_container">
+    <div class="pure-g">
+      <div class="pure-u-md-1-2 pure-u-1-1">
+        <!--  Inside of responsive container left-->
+        <div class="links">
+          <div class="">
+            {{data.project_link}}
+          </div>
+          <div class="">
+            {{data.github_link}}
+          </div>
+        </div>
+      </div>
+      <div class="pure-u-md-1-2 pure-u-1-1">
+        <!--  Inside of responsive container right-->
+        <div class="members">
+          Team Member:
+          {{#each members}}
+            {{name}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" id="backAll">go back to all projects</button>
+</template>
+
+<template name="projects">
+  {{#if singleProjectDetails}}
+    {{> singleProject}}
+  {{else}}
+  <div class="projectscontainer">
+    <div class="pure-g">
+      {{#each projectList}}
+        <div class="pure-u-md-1-3 pure-u-sm-1-2 pure-u-1-1">
+          <div class="projects" id="{{_id}}">
+            {{name}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  {{/if}}
+</template>
+
+<template name="bodyHolder">
+  {{> navbar}}
+  {{> aboutMe}}
+  {{#if toggle}}
+    {{> catProject}}
+  {{/if}}
+  {{#if numero}}
+    {{> projects}}
+  {{/if}}
+
+</template>
+
+<template name="introHolder">
+  {{#if counter}}
+    {{> intro}}
+  {{else}}
+    {{> bodyHolder}}
+  {{/if}}
+
+</template>
