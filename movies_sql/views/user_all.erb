@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>All users</title>
+ </head>
+ <body>
+   <h1>All the users page</h1>
+     <ul>
+       <%= User.all.each do |u| %>
+         <li>  <%= u.name %></li>
+       <% end %>
+     </ul>
+ </body>
+</html>

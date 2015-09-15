@@ -1,0 +1,100 @@
+.ball {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  float: left;
+  margin-top: -4px;
+  margin-left: 250px;
+  border-radius: 50%;
+  z-index: 2; }
+
+.squareTest {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: relative;
+  margin-top: 125px; }
+
+.holder {
+  width: 1000px;
+  height: 900px;
+  background-color: gray;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
+
+.bouncer.ui-draggable-dragging {
+  background-color: #82A3A3; }
+
+.board {
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 100px;
+  width: 560px;
+  height: 560px; }
+
+.square {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-color: #00B28F;
+  margin-left: 0px;
+  margin-left: 0px; }
+
+.bouncerForward {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #FAAC58;
+  position: absolute;
+  margin: 300px 0px 0px 50px; }
+
+.bouncerBack {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #91B5B5;
+  position: absolute;
+  margin: 400px 0px 0px 50px; }
+
+#draggableHelperForward {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #FAAC58;
+  position: relative;
+  margin: 300px 0px 0px 50px; }
+
+#draggableHelperBack {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #91B5B5;
+  position: relative;
+  margin: 400px 0px 0px 50px; }
+
+.bounceForward {
+  background-image: url('bounceForward.png');
+  /*background-color: #FAAC58;*/
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-left: 0px; }
+
+.bounceBack {
+  background-image: url('bounceBack.png');
+  /*background-color: #91B5B5;*/
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-left: 0px; }
+
+p {
+  font-size: 40px;
+  font-weight: bolder;
+  position: relative;
+  margin: 7px 0px 0px 24px; }

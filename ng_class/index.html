@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myClassApp">
+  <head>
+    <meta charset="utf-8">
+    <title>NG Class</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>{{1+2}}</h1>
+    <div class="container" ng-controller="playgroundController as play">
+      <button type="button" ng-click="play.makeItRed()" >Make it Red</button>
+      <button type="button" ng-click="play.makeItGreen()" >Make it green</button>
+      <button type="button" ng-click="play.makeItBlue()" >Make it blue</button>
+      <button type="button" ng-click="play.makeBig()" >Make it big</button>
+      <button type="button" ng-click="play.makeSmall()" >Make it Small</button>
+      <div ng-class="[play.color, play.fontSizeClass]">
+        <h2>
+          I have a color
+        </h2>
+      </div>
+      <div ng-class="{done: play.status, blee: false}">
+        <h3>I am styled by objects</h3>
+        <button type="button" ng-click="play.markAsDone()">flipflop</button>
+
+      </div>
+
+
+    </div>
+
+  </body>
+</html>

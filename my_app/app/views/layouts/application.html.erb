@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <%=yield(:dynamic_title)%>
+</head>
+<body>
+<h1>This is Jack's Layout</h1>
+<%= render("home/navbar") %>
+
+<%= yield %>
+
+<%= render("home/footer") %>
+<p>
+  params.to_s
+</p>
+</body>
+</html>

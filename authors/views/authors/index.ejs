@@ -1,0 +1,46 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<h1>authors</h1>
+<input type="text" id="writeAuthor"><button type="button" id="newAuthor" >Create Author</button>
+<button>Get Authors</button>
+<ul class="authors"></ul>
+
+<script>
+  $(function(){
+
+    $('button').on('click', function(){
+      var obj = $('#writeAuthor').val();
+      console.log("working oh yea");
+      $.ajax({
+        method: 'get'
+        ,url: 'https://montanaflynn-cat-overflow.p.mashape.com/'
+        ,success: function(data) {
+          $('.authors').append('<img src="'+data+'">')
+          console.log(data);
+          }
+        ,beforeSend: function(xhr) {
+          xhr.setRequestHeader("X-Mashape-Authorization", "j5IpMZF6GKmshE9PwMBseH63QrKqp1x51hljsn7eu1NDk5EKv0")
+          }
+        })
+      })
+
+
+
+    $('#newAuthor').on('click', function(){
+      console.log('created?');
+      var name = $('#writeAuthor').val();
+      console.log("name will be: "+name)
+      $.ajax({
+        method: 'post'
+        ,contentType: 'application/json; charset=UTF-8'
+        , dataType   : 'json'
+        , data: JSON.stringify({'name': name})
+        ,url: 'http://localhost:3000/authors'
+        ,success: function(data){
+          console.log(data);
+        }
+      })
+    })
+
+  })
+
+</script>

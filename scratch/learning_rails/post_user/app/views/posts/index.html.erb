@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Posts#index</h1>
+    <p>Find me in app/views/posts/index.html.erb</p>
+    <ul>
+      <% @posts.each do |p| %>
+      <li><%=p.url%></li>
+      <li><%=p.trick%></li>
+      <li><%=p.skater%></li>
+      <%end%>
+    </ul>
+  </body>
+</html>

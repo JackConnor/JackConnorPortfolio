@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit <%= skateboard.name%></title>
+    <link rel="stylesheet" href="/stylesheets/main.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <h1>Edit Page</h1>
+    <form action="/skateboards/<%=skateboard.id%>" method="post">
+      <input type="hidden" name="_method" value="PUT">
+      <input type="text" name="name" value="<%=skateboard.name%>">
+      <input type="text" name="color" value="<%=skateboard.color%>">
+      <input type="submit" class = "btn" value = 'edit skateboard now'>
+    </form>
+  </body>
+</html>

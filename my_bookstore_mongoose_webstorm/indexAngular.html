@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="booksApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <style>
+        body {
+            background-color: #55c4fa;
+        }
+        h1 {
+            color: white;
+        }
+        h2 {
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" ng-controller="booksController as books">
+        <h1>Welcome to my Angular Bookstore</h1>
+        <h2>All the Books</h2>
+        <div class="" ng-show="books.selectBook">
+          <h2>selected Book</h2>
+          {{books.selectedBook.name}}
+        </div>
+        <input id="edit" ng-model="books.selectedBook.name" type="text" ng-show="books.editBook(books.selectedBook)">
+        <input type="text" id="bookTitle" ng-model="books.newBookName"/>
+        <button ng-click="books.createGenericBook(books.newBookName)"></button>
+        <ul>
+            <li ng-repeat="book in books.booksList" id="{{book._id}}"><div>{{book.name}}</div><button ng-click="books.editBook(book)">Edit</button><button ng-click="books.deleteBook(book)">x</button><button ng-click="books.selectBook(book)">select</button></li>
+        </ul>
+        {{1+2}}
+    </div>
+    <script src="js/scripts.js"></script>
+    </body>
+</html>

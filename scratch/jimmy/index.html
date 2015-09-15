@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      #ball {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: red;
+      }
+
+      #metre {
+        height: 20px;
+        width: 0px;
+        background-color: red;
+
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Gravity Metre</title>
+  </head>
+  <body>
+    <div class="" id="ball"></div>
+    <div class="" id="metre"></div>
+    <script>
+    var $ball = $('#ball');
+    var $metre = $('#metre');
+    $ball.animate({"margin-top": "500px"}, {
+      duration: 2000,
+      step: function() {
+        console.log('Jimmy is a step');
+        $metre.css('width', function() {
+          return ($metre.width()+1);
+        })
+      }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+* {
+  transition: all .5s;
+}
+
+.reddish {
+  color: red;
+}
+
+.bluish {
+  color: blue;
+}
+
+.greenish {
+  color: green;
+}
+
+.biggish {
+  font-size: 50px;
+}
+
+.smallish {
+  font-size: 10px;
+}
+
+.done {
+  text-decoration: line-through;
+}

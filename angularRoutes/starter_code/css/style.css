@@ -1,0 +1,26 @@
+body{
+  background-color: #367FB0;
+}
+
+a{
+  color:white;
+}
+a:hover{
+  color:white;
+  text-decoration: none;
+}
+
+.content{
+  background-color: white;
+  border-radius: 5px;
+  padding:5px;
+  border: black 2px solid;
+}
+
+input{
+  border:black 2px solid;
+}
+
+ul{
+  list-style-type: none;
+}

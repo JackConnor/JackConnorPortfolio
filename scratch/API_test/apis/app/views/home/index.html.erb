@@ -1,0 +1,9 @@
+<h1>Home#index</h1>
+
+<h3>This is our httparty data</h3>
+
+<% form_for @word do |w| %>
+  <%= w.label :word %>
+  <%= w.text_field :word %>
+  <%= w.submit %>
+  <% end %>

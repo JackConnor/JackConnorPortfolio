@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class="all-phones">
+      <h1>Phones Indexx</h1>
+      <ul>
+        List of Phones
+        <% for (var i = phones.length-1; i > 0 ; i--) { %>
+          <li>Phone: <%=phones[i].name%></li>
+          <li>Color: <%=phones[i].color%></li>
+          <li><a href="/phones/<%=phones[i].id%>/edit">Edit </a>| </a><div id="<%=phones[i].color%> <%=phones[i].name%>" class="see-details">See Details</div></li>
+        <% } %>
+      </ul>
+      <div class="newph">New Phone</div>
+    </div>
+    <div class="show">
+      <div class="backShow"></div>
+      <h1 id="showName"></h1>
+      <h2 id="showColor"></h2>
+    </div>
+    <div class="newPhone">
+      <h1>New Phone</h1>
+      <form class="newForm" action="/phones" method="post">
+        <input name="name" placeholder="phone name">
+        <input name="color" placeholder="phone color">
+        <input type="submit" value="Submit Phone">
+      </form>
+    </div>
+    <script src="javascripts/skateboardViews.js" charset="utf-8"></script>
+  </body>
+</html>

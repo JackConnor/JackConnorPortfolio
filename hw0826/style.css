@@ -1,0 +1,11 @@
+.nameContainer {
+  display: inline-block;;
+  width: 250px;
+  outline: 3px solid gray;
+}
+
+.nameIdContainer {
+  display: inline-block;;
+  width: 250px;
+  outline: 3px solid green;
+}

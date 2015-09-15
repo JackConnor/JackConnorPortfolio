@@ -1,0 +1,23 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<div class="">
+  <%= @user.name %>
+  <ul>
+    <% @posts.each do |p| %>
+    <li><img src="<%=p.url %>" alt="" /></li>
+    <li><%=p.trick %></li>
+    <li><%=p.trick %></li>
+    <% end %>
+  </ul>
+  <%= @user.name %>
+  <p>
+    Some comments this user has made:
+  </p>
+  <ul>
+    <% @comments.each do |c| %>
+    <li><%= c.post.trick %></li>
+    <li><%= c.description %></li>
+    <% end %>
+  </ul>
+</div>

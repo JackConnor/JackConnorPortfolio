@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <base href="/" target="_blank" />
+  </head>
+  <body ng-controller="mainController as main">
+    <h1>{{main.message}}</h1>
+    <div class="" ng-view>
+
+    </div>
+    <button type="button" name="button"><a href="/">About</a></button>
+    <button type="button" name="button"><a href="/home">Back to Home</a></button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-route.js"></script>
+
+    <script src="app.js" charset="utf-8"></script>
+    <!--Import Controllers -->
+    <script src="mainCtrl.js" charset="utf-8"></script>
+    <script src="homeCtrl.js" charset="utf-8"></script>
+    <script src="aboutCtrl.js" charset="utf-8"></script>
+    <script src="routes.js" charset="utf-8"></script>
+  </body>
+</html>

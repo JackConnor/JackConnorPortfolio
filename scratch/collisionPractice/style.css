@@ -1,0 +1,14 @@
+#collider {
+	height: 75px;
+	width: 75px;
+	background-color: red;
+	float: left;
+}
+
+#stationary {
+	height: 75px;
+	width: 75px;
+	background-color: blue;
+	margin-left: 500px;
+	position: absolute;
+}

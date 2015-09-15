@@ -1,0 +1,11 @@
+<div class="content text-center">
+  <ul>
+    <li ng-repeat="brady in bradyCtrl.bradyBunch">
+      {{brady.name}}<br>
+      <img src="{{brady.img}}" alt="" />
+      <button type="button" name="button" ><a href="/#/brady/{{$index}}">see Brady</a></button>
+    </li>
+  </ul>
+
+  <button class="btn btn-danger"><a href="/#/new">Add a new Brady</a></button>
+</div>

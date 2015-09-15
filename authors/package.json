@@ -1,0 +1,17 @@
+{
+  "name": "authors",
+  "version": "1.0.0",
+  "description": "show authors",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "WDI_17",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "mongoose": "*"
+  }
+}
