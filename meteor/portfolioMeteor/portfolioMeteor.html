@@ -22,27 +22,35 @@
 <!--end body and start templates-->
 
 <template name="intro">
-  <div class="introContainer">
-    <div class="introBox">
-      <h1>Jack Connor</h1>
-      <h3 class='title'>javascript | angular | full-stack development</h3>
-      <br>
+  <div class="introContainer container-fluid">
+    <div class="row">
+      <div class="introBox col-xs-12">
+        <h1>Jack Connor</h1>
+        <h3 class='title'>javascript | angular | full-stack development</h3>
+        <br>
+      </div>
+      <div class="col-md-4 col-md-4-offset-4">
+        <h1 class="clickToEnter"></h1>
+      </div>
     </div>
-    <h1 class="clickToEnter"></h1>
   </div>
 </template>
 
 <template name="navbar">
-  <div class="navcontainer">
-    <div class="siteTitle">
-      <h1>Jack Connor</h1>
-      <h3>Full-Stack Web Developer</h3>
-    </div>
-    <div class="navButtons">
-      <ul>
-        <li class="button"><p>Contact Now</p></li>
-        <li class="button"><p>About Jack</p></li>
-      </ul>
+  <div class="navcontainer container-fluid">
+    <div class="row">
+      <div class="siteTitle col-md-6 col-md-offset-6 col-xs-12">
+        <h1>Jack Connor</h1>
+        <h3>Full-Stack Web Developer</h3>
+      </div>
+      <div class="col-sm-4 col-sm-offset-7 col-xs-12">
+        <div class="navButtons">
+          <ul>
+            <li class="button"><p>Contact Now</p></li>
+            <li class="button"><p>About Jack</p></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -90,10 +98,9 @@
     <div class="catHolder">
       {{#each categoryProjects}}
         <div id="{{name}}" class="catProj">
-          <h2>{{name}}</h2>
-          <h2>{{description}}</h2>
-          <h4>Technologies:</h4>
-          <h4>{{technologies}}</h4>
+          <img src="{{photo}}"/>
+          <h2>Project: {{name}}</h2>
+          <!-- <h2>{{description}}</h2> -->
         </div>
       {{/each}}
     </div>
