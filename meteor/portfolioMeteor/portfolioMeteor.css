@@ -7,11 +7,16 @@
 .aboutmecontainer {
   min-height: 300px;
   max-height: 100%;
-  background-color: gray;
-}
+  /*background-color: gray;*/}
 
 .appContainer {
-  width: 95%;
+  width: 100%;
+  background-color: #CADCDE;
+  padding-top: 5px;
+}
+
+.bodyContainer {
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -99,12 +104,13 @@
 }
 
 .navcontainer {
-  background-color: blue;
+  border-bottom: 5px solid gray;
   height: 150px;
+  padding-top: 1px;
 }
 
 .navcontainer h1 {
-  color: white;
+  color: black;
 }
 
 

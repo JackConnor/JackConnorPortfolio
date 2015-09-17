@@ -40,17 +40,25 @@ if (Meteor.isClient) {
   })
 
   Template.catProject.events({
-    'click .catContainer': function(){
+    'click .catProj': function(event){
         var filterCategory = Projects.find({technologies: {$regex: /\bruby\b/}});
+        //database call for single project
+        var objId = event.target.id;
+        console.log(objId);
+        var currentProj = Projects.findOne({"name":objId});
+        Session.set('currentProject', currentProj);
+        console.log(currentProj);
+        console.log(currentProj.name);
+        if (!Session.get('singleCounter')) {
+          Session.set('singleCounter', !Session.get('singleCounter'));
+        }
+        Session.set('aboutMeCounter', !Session.get('aboutMeCounter'));
 
-        console.log(filterCategory);
+
+        // console.log(currentProj.name);
     }
-
-
-
   })
 
-  Template.catProject.onRendered();
 
   Template.catProject.helpers({
     categoryProjects: function(){
@@ -86,9 +94,7 @@ if (Meteor.isClient) {
     },
     singleProjectDetails: function(){
       //counter stuff
-
       if(Session.get('singleCounter')) {
-
         var proj = Session.get('currentProject');
         return proj;
       } else {
@@ -117,11 +123,9 @@ if (Meteor.isClient) {
 
   Template.intro.events({
     'click .introContainer': function(){
-      console.log('intro thingy clicked');
       Session.set('introCounter', !Session.get('introCounter'));
     },
     'mouseover .introContainer': function(){
-      console.log('mousing overeeree');
       // var x = $('.clickToEnter');
       var x = $('.title');
        x.animate({opacity: .8}, 2200);
@@ -133,18 +137,15 @@ if (Meteor.isClient) {
 
   Template.introHolder.helpers({
     counter: function(){
-      console.log(Session.get('introCounter'));
-       return Session.get('introCounter')
+      return Session.get('introCounter')
     }
   })
 
   Template.bodyHolder.helpers({
     numero: function(){
-      console.log(Session.get('numero'));
       return Session.get('numero');
     },
     toggle: function(){
-      console.log(Session.get('aboutMeCounter'));
       return Session.get('aboutMeCounter');
     }
   });

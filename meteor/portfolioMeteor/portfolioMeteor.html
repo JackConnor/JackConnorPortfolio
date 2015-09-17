@@ -68,7 +68,7 @@
   <div class="catContainer">
     <div class="catHolder">
       {{#each categoryProjects}}
-        <div class="catProj">
+        <div id="{{name}}" class="catProj">
           <h2>{{name}}</h2>
           <h2>{{description}}</h2>
           <h4>Technologies:</h4>
@@ -146,15 +146,16 @@
 </template>
 
 <template name="bodyHolder">
-  {{> navbar}}
-  {{> aboutMe}}
-  {{#if toggle}}
-    {{> catProject}}
-  {{/if}}
-  {{#if numero}}
-    {{> projects}}
-  {{/if}}
-
+  <div class="bodyContainer">
+    {{> navbar}}
+    {{> aboutMe}}
+    {{#if toggle}}
+      {{> catProject}}
+    {{/if}}
+    {{#if numero}}
+      {{> projects}}
+    {{/if}}
+  </div>
 </template>
 
 <template name="introHolder">
