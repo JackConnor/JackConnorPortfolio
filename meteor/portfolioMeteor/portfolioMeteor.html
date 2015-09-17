@@ -25,10 +25,10 @@
   <div class="introContainer">
     <div class="introBox">
       <h1>Jack Connor</h1>
-      <h3>first class web developer, extraordinaire</h3>
+      <h3 class='title'>javascript | angular | full-stack development</h3>
       <br>
     </div>
-    <h1 class="clickToEnter">Click to Enter</h1>
+    <h1 class="clickToEnter"></h1>
   </div>
 </template>
 
@@ -66,7 +66,16 @@
 
 <template name="catProject">
   <div class="catContainer">
-
+    <div class="catHolder">
+      {{#each categoryProjects}}
+        <div class="catProj">
+          <h2>{{name}}</h2>
+          <h2>{{description}}</h2>
+          <h4>Technologies:</h4>
+          <h4>{{technologies}}</h4>
+        </div>
+      {{/each}}
+    </div>
   </div>
 </template>
 
@@ -137,7 +146,7 @@
 </template>
 
 <template name="bodyHolder">
-  {{> navbar}} 
+  {{> navbar}}
   {{> aboutMe}}
   {{#if toggle}}
     {{> catProject}}
