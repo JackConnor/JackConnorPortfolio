@@ -21,15 +21,30 @@ if (Meteor.isClient) {
     'click .cat': function(evt){
       //begin category calc
       console.log(evt.target);
-      console.log(evt.target.parentNode);
+      console.log(evt.target.parentNode.parentNode);
+      console.log(evt.target.parentNode.parentNode.id);
       if(evt.target.id){
         Session.set('currentCategory', evt.target.id)
       } else {
-        Session.set('currentCategory', evt.target.parentNode.id)
+        Session.set('currentCategory', evt.target.parentNode.parentNode.id)
       }
       console.log(Session.get('currentCategory'));
       Session.set('aboutMeCounter', !Session.get('aboutMeCounter'));
       // return Session.get('aboutMeCounter');
+    },
+    'mouseenter .category': function(evt){
+      // $(this).child('techTitle').css('opacity', 1);
+      console.log(evt);
+      console.log(evt.currentTarget.parentNode.parentNode.childNodes[3]);
+      var textTarget = evt.currentTarget.parentNode.parentNode.childNodes[3];
+      console.log(textTarget);
+
+
+
+      textTarget.style.opacity =  1;
+    },
+    'mouseleave .category': function(){
+      $('.techTitle').css('opacity', 0);
     }
   })
 
@@ -53,9 +68,6 @@ if (Meteor.isClient) {
           Session.set('singleCounter', !Session.get('singleCounter'));
         }
         Session.set('aboutMeCounter', !Session.get('aboutMeCounter'));
-    },
-    'mouseover .imageHolder': function(){
-      console.log('mousing');
     }
   })
 
