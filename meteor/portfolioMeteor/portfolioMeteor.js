@@ -7,6 +7,7 @@ if (Meteor.isClient) {
   Session.setDefault('singleCounter', false);
   Session.setDefault('aboutMeCounter', false);
   Session.setDefault('currentProject', null);
+  Session.setDefault('currentCategory', null);
 
   Template.navbar.helpers({
 
@@ -19,17 +20,16 @@ if (Meteor.isClient) {
   Template.aboutMe.events({
     'click .cat': function(evt){
       //begin category calc
-      var catArray = Projects.find();
-      console.log(catArray);
-
-      Session.set('catArray', catArray);
-
-      var techArr = catArray;
-      console.log(techArr);
-
-      Session.set('categoryName', evt.target.id)
+      console.log(evt.target);
+      console.log(evt.target.parentNode);
+      if(evt.target.id){
+        Session.set('currentCategory', evt.target.id)
+      } else {
+        Session.set('currentCategory', evt.target.parentNode.id)
+      }
+      console.log(Session.get('currentCategory'));
       Session.set('aboutMeCounter', !Session.get('aboutMeCounter'));
-      return Session.get('aboutMeCounter');
+      // return Session.get('aboutMeCounter');
     }
   })
 
@@ -37,6 +37,35 @@ if (Meteor.isClient) {
     catProjects: function(){
       return Session.get('catArray');
     }
+  })
+
+  Template.catProject.events({
+    'click .catContainer': function(){
+        var filterCategory = Projects.find({technologies: {$regex: /\bruby\b/}});
+
+        console.log(filterCategory);
+    }
+
+
+
+  })
+
+  Template.catProject.onRendered();
+
+  Template.catProject.helpers({
+    categoryProjects: function(){
+          var category = Session.get("currentCategory");
+          if(category == "ruby"){
+            var filterCategory = Projects.find({technologies: {$regex: /\bruby\b/}}, {limit: 4});
+          } else if(category == "ux") {
+            var filterCategory = Projects.find({technologies: {$regex: /\bux\b/}}, {limit: 4});
+          } else if(category == "javascript") {
+            var filterCategory = Projects.find({technologies: {$regex: /\bjavascript\b/}}, {limit: 4});
+          }
+          var returnCat = filterCategory
+          return returnCat;
+        }
+    //end of template
   })
 
   Template.projects.events({
@@ -93,10 +122,11 @@ if (Meteor.isClient) {
     },
     'mouseover .introContainer': function(){
       console.log('mousing overeeree');
-      var x = $('.clickToEnter');
-      x.animate({opacity: .8}, 3500);
+      // var x = $('.clickToEnter');
+      var x = $('.title');
+       x.animate({opacity: .8}, 2200);
       setTimeout(function(){
-        x.animate({opacity: 0}, 4000);
+        x.animate({opacity: .25}, 3000);
       })
     }
   })
@@ -110,9 +140,11 @@ if (Meteor.isClient) {
 
   Template.bodyHolder.helpers({
     numero: function(){
+      console.log(Session.get('numero'));
       return Session.get('numero');
     },
     toggle: function(){
+      console.log(Session.get('aboutMeCounter'));
       return Session.get('aboutMeCounter');
     }
   });
