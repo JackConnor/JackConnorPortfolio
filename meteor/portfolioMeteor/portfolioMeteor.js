@@ -53,9 +53,9 @@ if (Meteor.isClient) {
           Session.set('singleCounter', !Session.get('singleCounter'));
         }
         Session.set('aboutMeCounter', !Session.get('aboutMeCounter'));
-
-
-        // console.log(currentProj.name);
+    },
+    'mouseover .imageHolder': function(){
+      console.log('mousing');
     }
   })
 
