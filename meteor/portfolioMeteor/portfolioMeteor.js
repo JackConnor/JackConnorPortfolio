@@ -95,6 +95,7 @@ if (Meteor.isClient) {
   Template.projects.events({
     'click .projects': function(evt){
       Session.set('singleCounter', !Session.get('singleCounter'));
+      if(evt.target)
       var name = $(evt.target)
       console.log(name);
       var currProj = Projects.findOne({"name": name.context.innerText});
