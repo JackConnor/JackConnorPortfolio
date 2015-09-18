@@ -7,7 +7,13 @@
 .aboutmecontainer {
   min-height: 300px;
   max-height: 100%;
-  /*background-color: gray;*/}
+  background-color: #dfeaeb;
+  border-bottom: 2px solid #DEC8C8;
+}
+
+.aboutmecontainer h2 {
+  text-align: center;
+}
 
 .appContainer {
   width: 100%;
@@ -22,7 +28,7 @@
 
 .bottom_container {
   height: 400px;
-  background-color: orange;
+  background-color: #dfeaeb;
   margin: 10px 0 0 0;
 }
 
@@ -44,8 +50,10 @@
 
 .cat {
   width: 200px;
+  height: 200px;
   display: inline-block;
-  margin-left: 35px;
+  margin: 30px 0 20px 35px;
+
 }
 
 .category:hover {
@@ -56,21 +64,23 @@
 .category{
   max-height: 100%;
   max-width: 100%;
-  border-radius: 50%;
+  border-radius: 25%;
 }
 
 .catContainer {
-  height: 350px;
   min-height: 100%;
-  background-color: #C0C0C0;
+  background-color: white;
   position: relative;
 }
 
 .catHolder {
-  margin: 0 0 0 5%;
-  width: 90%;
+  margin: 0 auto;
+  width: 1030px;
   height: 100%;
   position: relative;
+  /*outline: 1px solid black;*/
+  margin-bottom: 25px;
+  background-color: #FFCCCC;
 }
 
 .clickToEnter {
@@ -83,15 +93,15 @@
   display: inline-block;
   height: 300px;
   width: 300px;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 30px 40px;
   background-color: #A9F5D0;
   border-radius: 10%;
 }
 
 .catProj img{
-  max-width: 90%;
+  max-width: 95%;
   margin-top: 15px;
-  margin-left: 5%;
+  margin-left: 2.5%;
   border-radius: 10%;
 }
 
@@ -104,10 +114,10 @@
 .imageHolder {
   height: 200px;
   width: 200px;
-  background-color: #A0A0A0;
+  background-color: #0B2161;
   display: inline-block;
   margin-left: 30px;
-  border-radius: 50%
+  border-radius: 25%
 }
 
 .imageHolder:hover {
@@ -126,14 +136,26 @@
   height: 900px;
 }
 
+.infoProject {
+  color: white;
+}
+
 .introBox {
   background-color: white;
   color: gray;
   width: 60%;
   position: relative;
-  font-size: 27px;
   margin: 350px 0 0 185px;
   background-color: #CADCDE;
+}
+
+.introBox h1 {
+  font-size: 60px;
+}
+
+.introBox h3 {
+  font-size: 30px;
+  margin-top: 0px
 }
 
 .links {
@@ -160,9 +182,10 @@
 }
 
 .navcontainer {
-  border-bottom: 5px solid gray;
+  /*border-bottom: 5px solid gray;*/
   height: 170px;
   padding-top: 1px;
+    border-bottom: 2px solid #DEC8C8;
 }
 
 .navcontainer h1 {
@@ -185,21 +208,39 @@
 }
 
 .projects {
-  margin: 20px 20px 20px 20px;
-  height: 300px;
-  background-color: #CCCCFF;
+  margin: 20px 10px 20px 10px;
+  height: 350px;
+  text-align: center;
+  min-height: 100%;
+  background-color: #6B4848;
+}
+
+.projects img {
+  max-width: 95%;
+  max-height: 100%;
+  margin: 2.5%;
+
 }
 
 .projectscontainer {
-  background-color: green;
   min-height: 300px;
   height: 100%;
-  padding-bottom: 10px;
+  padding-top: 40px;
 }
 
+.projectTitle {
+  text-align: center;
+  height: 150px;
+  color: white;
+  background-color: #65937c;
+}
+
+.projectTitle h1 {
+  font-size: 50px;
+}
 
 .singleProjectContainer {
-  background-color: yellow;
+  /*background-color: yellow;*/
   height: 700px;
   padding-bottom: 10px;
   width: 100%;
@@ -236,6 +277,15 @@
 }
 
 /* begin id elements */
+#catProjectContainer {
+  outline: 1px solid gray;
+}
+
+#clickCategory {
+  text-align: center;
+  color: #A0A0A0;
+}
+
 #project_photo {
   height: 550px;
   /*width: 550px;

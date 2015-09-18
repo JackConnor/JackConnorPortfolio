@@ -25,8 +25,17 @@ if (Meteor.isClient) {
       console.log(evt.target.parentNode.parentNode.id);
       if(evt.target.id){
         Session.set('currentCategory', evt.target.id)
+        console.log(evt.target);
+        // $('.category').css('opacity', .2);
+        // document.querySelector(".techTitle").style.opacity = 1;
       } else {
-        Session.set('currentCategory', evt.target.parentNode.parentNode.id)
+        console.log(evt.target.parentNode.parentNode.id);
+        // $('.category').each(function(){
+        //   $(this).css('opacity', .2);
+        // }
+        Session.set('currentCategory', evt.target.parentNode.parentNode.id);
+
+        // document.querySelector(".techTitle").style.opacity = 1;
       }
       console.log(Session.get('currentCategory'));
       Session.set('aboutMeCounter', !Session.get('aboutMeCounter'));
@@ -76,11 +85,11 @@ if (Meteor.isClient) {
     categoryProjects: function(){
           var category = Session.get("currentCategory");
           if(category == "ruby"){
-            var filterCategory = Projects.find({technologies: {$regex: /\bruby\b/}}, {limit: 4});
+            var filterCategory = Projects.find({technologies: {$regex: /\bruby\b/}}, {limit: 3});
           } else if(category == "ux") {
-            var filterCategory = Projects.find({technologies: {$regex: /\bux\b/}}, {limit: 4});
+            var filterCategory = Projects.find({technologies: {$regex: /\bux\b/}}, {limit: 3});
           } else if(category == "javascript") {
-            var filterCategory = Projects.find({technologies: {$regex: /\bjavascript\b/}}, {limit: 4});
+            var filterCategory = Projects.find({technologies: {$regex: /\bjavascript\b/}}, {limit: 3});
           }
           var returnCat = filterCategory
           return returnCat;
