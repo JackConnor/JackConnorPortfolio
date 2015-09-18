@@ -95,13 +95,26 @@ if (Meteor.isClient) {
   Template.projects.events({
     'click .projects': function(evt){
       Session.set('singleCounter', !Session.get('singleCounter'));
-      if(evt.target)
-      var name = $(evt.target)
-      console.log(name);
-      var currProj = Projects.findOne({"name": name.context.innerText});
-      Session.set('currentProject', currProj);
-      console.log(Session.get('currentProject'));
-    }
+      if(evt.target.id[0] == "O") {
+        var id = evt.target.id;
+        console.log(id);
+        var currProj = Projects.findOne(id);
+        Session.set('currentProject', currProj);
+        console.log(Session.get('currentProject'));
+      }else if(evt.target.id){
+        var name = evt.target.id;
+        console.log(name);
+        var currProj = Projects.findOne({"name": name});
+        Session.set('currentProject', currProj);
+        console.log(Session.get('currentProject'));
+      }else{
+        var name = $(evt.target);
+        var currProj = Projects.findOne({"name": name.context.innerText});
+        Session.set('currentProject', currProj);
+        console.log(Session.get('currentProject'));
+      }
+    },
+    'mouseenter '
   })
 
   Template.projects.helpers({
