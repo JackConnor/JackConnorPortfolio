@@ -39,17 +39,12 @@ if (Meteor.isClient) {
       }
       console.log(Session.get('currentCategory'));
       Session.set('aboutMeCounter', !Session.get('aboutMeCounter'));
-      // return Session.get('aboutMeCounter');
     },
     'mouseenter .category': function(evt){
-      // $(this).child('techTitle').css('opacity', 1);
       console.log(evt);
       console.log(evt.currentTarget.parentNode.parentNode.childNodes[3]);
       var textTarget = evt.currentTarget.parentNode.parentNode.childNodes[3];
       console.log(textTarget);
-
-
-
       textTarget.style.opacity =  1;
     },
     'mouseleave .category': function(){
@@ -100,11 +95,26 @@ if (Meteor.isClient) {
   Template.projects.events({
     'click .projects': function(evt){
       Session.set('singleCounter', !Session.get('singleCounter'));
-      var name = $(evt.target)
-      var currProj = Projects.findOne({"name": name.context.innerText});
-      Session.set('currentProject', currProj);
-      console.log(Session.get('currentProject'));
-    }
+      if(evt.target.id[0] == "O") {
+        var id = evt.target.id;
+        console.log(id);
+        var currProj = Projects.findOne(id);
+        Session.set('currentProject', currProj);
+        console.log(Session.get('currentProject'));
+      }else if(evt.target.id){
+        var name = evt.target.id;
+        console.log(name);
+        var currProj = Projects.findOne({"name": name});
+        Session.set('currentProject', currProj);
+        console.log(Session.get('currentProject'));
+      }else{
+        var name = $(evt.target);
+        var currProj = Projects.findOne({"name": name.context.innerText});
+        Session.set('currentProject', currProj);
+        console.log(Session.get('currentProject'));
+      }
+    },
+    'mouseenter '
   })
 
   Template.projects.helpers({
