@@ -115,16 +115,14 @@ if (Meteor.isClient) {
       }
     },
     'mouseenter .projectPhoto':function(evt){
-      console.log(evt.target);
       var target = $(evt.target);
       target.animate({
-        "opacity": .3
+        "opacity": .6
       }, 300);
-      console.log(target.parent().children()[1]);
-      var target = target.parent().children()[1];
-      console.log(target);
-      target.css({
-        "width": 80+"%"
+      var textBlurb = $(target.parent().children()[1]);
+      textBlurb.animate({
+        width: "290px",
+        fontSize: "18px"
       })
     },
     'mouseleave .projectPhoto': function(evt){
@@ -132,6 +130,11 @@ if (Meteor.isClient) {
       target.animate({
         opacity: 1
       }, 100);
+      var textBlurb = $(target.parent().children()[1]);
+      textBlurb.animate({
+        width: "0px",
+        fontSize: "0px"
+      })
     }
   })
 

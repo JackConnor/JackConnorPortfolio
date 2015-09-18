@@ -210,12 +210,14 @@
 
 .popout {
   width: 0px;
+  text-align: center;
+  font-size: 0px;
   height: 60px;
   color: white;
   background: black;
   position: absolute;
   margin: -95px 0 0 2%;
-  opacity: .8;
+  opacity: .7;
 }
 
 .projects {
@@ -223,7 +225,7 @@
   height: 350px;
   text-align: center;
   min-height: 100%;
-  background-color: #6B4848;
+  background-color: #285151;
 }
 
 .projects img {
@@ -241,13 +243,19 @@
 
 .projectTitle {
   text-align: center;
-  height: 150px;
-  color: white;
-  background-color: #65937c;
+  height: 130px;
+  border-radius: 20px;
+  outline: 5px solid #007999;
+  color: #007999;
+  /*background-color: #af594f;*/
 }
 
 .projectTitle h1 {
   font-size: 50px;
+}
+
+.projectTitle h3 {
+  margin-top: -30px;
 }
 
 .singleProjectContainer {
