@@ -39,17 +39,12 @@ if (Meteor.isClient) {
       }
       console.log(Session.get('currentCategory'));
       Session.set('aboutMeCounter', !Session.get('aboutMeCounter'));
-      // return Session.get('aboutMeCounter');
     },
     'mouseenter .category': function(evt){
-      // $(this).child('techTitle').css('opacity', 1);
       console.log(evt);
       console.log(evt.currentTarget.parentNode.parentNode.childNodes[3]);
       var textTarget = evt.currentTarget.parentNode.parentNode.childNodes[3];
       console.log(textTarget);
-
-
-
       textTarget.style.opacity =  1;
     },
     'mouseleave .category': function(){
@@ -101,6 +96,7 @@ if (Meteor.isClient) {
     'click .projects': function(evt){
       Session.set('singleCounter', !Session.get('singleCounter'));
       var name = $(evt.target)
+      console.log(name);
       var currProj = Projects.findOne({"name": name.context.innerText});
       Session.set('currentProject', currProj);
       console.log(Session.get('currentProject'));
