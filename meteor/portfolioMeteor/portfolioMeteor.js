@@ -115,7 +115,23 @@ if (Meteor.isClient) {
       }
     },
     'mouseenter .projectPhoto':function(evt){
-      console.log('were mousing into it!!!');
+      console.log(evt.target);
+      var target = $(evt.target);
+      target.animate({
+        "opacity": .3
+      }, 300);
+      console.log(target.parent().children()[1]);
+      var target = target.parent().children()[1];
+      console.log(target);
+      target.css({
+        "width": 80+"%"
+      })
+    },
+    'mouseleave .projectPhoto': function(evt){
+      var target = $(evt.target);
+      target.animate({
+        opacity: 1
+      }, 100);
     }
   })
 

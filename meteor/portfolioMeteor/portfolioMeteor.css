@@ -185,7 +185,7 @@
   /*border-bottom: 5px solid gray;*/
   height: 170px;
   padding-top: 1px;
-  border-bottom: 5px solid #CDB1C7; 
+  border-bottom: 5px solid #CDB1C7;
 
 }
 
@@ -206,6 +206,16 @@
   width: 425px;
   height: 425px;
   margin: 5% 0 0 5%;
+}
+
+.popout {
+  width: 0px;
+  height: 60px;
+  color: white;
+  background: black;
+  position: absolute;
+  margin: -95px 0 0 2%;
+  opacity: .8;
 }
 
 .projects {
