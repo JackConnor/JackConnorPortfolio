@@ -114,7 +114,9 @@ if (Meteor.isClient) {
         console.log(Session.get('currentProject'));
       }
     },
-    'mouseenter '
+    'mouseenter .projectPhoto':function(evt){
+      console.log('were mousing into it!!!');
+    }
   })
 
   Template.projects.helpers({
