@@ -35,16 +35,21 @@
 <template name="navbar">
   <div class="navcontainer container-fluid">
     <div class="row">
-      <div class="siteTitle col-md-6 col-md-offset-6 col-xs-12">
+      <div class="siteTitle col-sm-6 col-sm-offset-3 col-xs-12">
         <h1>Jack Connor</h1>
-        <h3>Full-Stack Web Developer</h3>
+        <p>Javascript Full-Stack Developer | Science Lover | Skateboard Aficionado</p>
       </div>
-      <div class="col-sm-4 col-sm-offset-7 col-xs-12">
-        <div class="navButtons">
-          <ul>
-            <li class="button"><p>Contact Now</p></li>
-            <li class="button"><p>About Jack</p></li>
-          </ul>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+          <div class="navButtons">
+            <div class="row">
+              <div>
+                <div class="button col-sm-4 col-xs-12"><p>My Github</p></div>
+                <div class="button col-sm-4 col-xs-12"><p>Contact Jack</p></div>
+                <div class="button col-sm-4 col-xs-12"><p>About Jack</p></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -167,7 +172,8 @@
   <div class="projectscontainer container-fluid">
     <div class="row">
       <div class="projectTitle col-md-6 col-md-offset-3 col-xs-offset-0">
-        <h1>Web and Mobile Projects by Jack</h1>
+        <h2>Web and Mobile Projects</h2>
+        <h4>(click on a project to learn more)</h4>
       </div>
     </div>
     <div class="row">
@@ -175,6 +181,7 @@
         <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="projects" id="{{_id}}">
             <img src="{{photo}}" id="{{name}}" class="projectPhoto"/>
+            <div class="popout">built with: {{technologies}}</div>
             <div class="infoProject">
               <h2>{{name}}</h2>
               <p>

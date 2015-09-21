@@ -115,7 +115,26 @@ if (Meteor.isClient) {
       }
     },
     'mouseenter .projectPhoto':function(evt){
-      console.log('were mousing into it!!!');
+      var target = $(evt.target);
+      target.animate({
+        "opacity": .6
+      }, 300);
+      var textBlurb = $(target.parent().children()[1]);
+      textBlurb.animate({
+        width: "290px",
+        fontSize: "18px"
+      })
+    },
+    'mouseleave .projectPhoto': function(evt){
+      var target = $(evt.target);
+      target.animate({
+        opacity: 1
+      }, 100);
+      var textBlurb = $(target.parent().children()[1]);
+      textBlurb.animate({
+        width: "0px",
+        fontSize: "0px"
+      })
     }
   })
 
@@ -161,7 +180,7 @@ if (Meteor.isClient) {
     'mouseover .introContainer': function(){
       // var x = $('.clickToEnter');
       var x = $('.title');
-       x.animate({opacity: .8}, 2200);
+       x.animate({opacity: .8}, 1000);
       setTimeout(function(){
         x.animate({opacity: .25}, 3000);
       })

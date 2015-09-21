@@ -1,6 +1,9 @@
 /* CSS declarations go here */
 /* begin html elements */
 
+li {
+  list-style-type: none;
+}
 
 /* begin class elements */
 
@@ -34,14 +37,16 @@
 
 .button{
   display: inline-block;
-  width: 150px;
-  height: 60px;
-  outline: 1px solid gray;
-  position: relative;
-  margin-bottom: 20px;
-  margin-left: 5px;
+  height: 65px;
+  outline: 3px solid #979797;
   text-align: center;
-  font-size: 19px;
+  color: #525252;
+  font-size: 24px;
+  margin: 0 0 0 0;
+}
+
+.button p{
+  margin-top: 15px;
 }
 
 .button:hover {
@@ -172,21 +177,17 @@
 
 .navButtons {
   display: block;
-  width: 355px;
-  /*float: right;*/
-  /*margin-right: 5%;*/
+  margin-top: 42px;
 }
 
-.navbuttons li p {
+.navbuttons div p {
   margin-top: 10px;
 }
 
 .navcontainer {
-  /*border-bottom: 5px solid gray;*/
-  height: 170px;
-  padding-top: 1px;
-  border-bottom: 5px solid #CDB1C7; 
-
+  min-height: 200px;
+  height: 100%;
+  border-bottom: 2px solid gray;
 }
 
 .navcontainer h1 {
@@ -208,12 +209,24 @@
   margin: 5% 0 0 5%;
 }
 
+.popout {
+  width: 0px;
+  text-align: center;
+  font-size: 0px;
+  height: 60px;
+  color: white;
+  background: black;
+  position: absolute;
+  margin: -95px 0 0 2%;
+  opacity: .7;
+}
+
 .projects {
   margin: 20px 10px 20px 10px;
   height: 350px;
   text-align: center;
   min-height: 100%;
-  background-color: #6B4848;
+  background-color: #285151;
 }
 
 .projects img {
@@ -231,13 +244,19 @@
 
 .projectTitle {
   text-align: center;
-  height: 150px;
-  color: white;
-  background-color: #65937c;
+  /*height: 130px;
+  border-radius: 20px;
+  outline: 5px solid #007999;*/
+  color: #007999;
+  /*background-color: #af594f;*/
 }
 
 .projectTitle h1 {
   font-size: 50px;
+}
+
+.projectTitle h3 {
+  margin-top: -30px;
 }
 
 .singleProjectContainer {
@@ -248,16 +267,19 @@
 }
 
 .siteTitle {
-  margin: 0 0 0 10%;
+  /*margin: 0 0 0 10%;*/
   display: block;
+  text-align: center;
 }
 
-.siteTitle h3{
-  margin: -15px 0 0 0;
+.siteTitle p{
+  margin: 9px 0 0 0;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .siteTitle h1 {
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .techTitle {
