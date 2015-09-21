@@ -180,7 +180,7 @@ if (Meteor.isClient) {
     'mouseover .introContainer': function(){
       // var x = $('.clickToEnter');
       var x = $('.title');
-       x.animate({opacity: .8}, 2200);
+       x.animate({opacity: .8}, 1000);
       setTimeout(function(){
         x.animate({opacity: .25}, 3000);
       })
