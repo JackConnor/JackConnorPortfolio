@@ -50,7 +50,7 @@ li {
 }
 
 .button:hover {
-  background-color: #A9F5F2;
+  background-color: #C2FFF3;
 }
 
 .cat {
@@ -269,7 +269,7 @@ li {
 .siteTitle {
   /*margin: 0 0 0 10%;*/
   display: block;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .siteTitle p{
