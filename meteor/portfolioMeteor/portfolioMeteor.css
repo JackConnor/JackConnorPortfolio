@@ -204,9 +204,8 @@ li {
 }
 
 .photo_container img{
-  width: 425px;
-  height: 425px;
-  margin: 5% 0 0 5%;
+  min-width: 90%;
+  height: 400px;
 }
 
 .popout {
