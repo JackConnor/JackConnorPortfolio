@@ -1,7 +1,13 @@
 Projects = new Mongo.Collection('projects');
 
+if (Meteor.isServer){
+  Meteor.startup(function(){
+    process.env.MONGO_URL=' mongodb://jackconnor:Skateboard1@ds051913.mongolab.com:51913/jackconnorportfoliodb'
+  })
+}
+
 if (Meteor.isClient) {
-  // process.env.MONGO_URL=' mongodb://jackconnor:Skateboard1@ds051913.mongolab.com:51913/jackconnorportfoliodb'
+
   // counter starts at 0
   Session.setDefault('introCounter', true);
   Session.setDefault('numero', true);
