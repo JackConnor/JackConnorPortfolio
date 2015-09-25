@@ -133,7 +133,9 @@ li {
 }
 
 .descriptionsContainer {
-    height: 300px;
+    /*height: 300px;*/
+    padding-bottom: 25px;
+    min-height: 100%;
     background-color: #92E2E7;
 }
 
@@ -238,6 +240,7 @@ li {
 .linksContainer {
   height: 300px;
   text-align: center;
+  padding-top: 10px;
 }
 
 .live {
@@ -397,7 +400,7 @@ li {
 }
 
 .techList {
-
+  margin: 6px 0 0 0;
 }
 
 .techStack {
@@ -408,6 +411,11 @@ li {
   text-align: center;
   background-color: #EBD3EB;
   color: #5B585B;
+}
+
+.techStack h3{
+    margin: 15px auto 0 auto;
+    padding-top: 10px
 }
 
 .techTitle {
@@ -437,7 +445,7 @@ li {
   padding-top: 5px;
   height: 130px;
   width: 1620px;
-  background-color: #FADCFA;
+  background-color: #FCCECE;
 }
 
 .thumbPhoto {
@@ -524,7 +532,13 @@ li {
 }
 
 #soWhat {
-  
+  margin: 0 0 0 5%;
+  padding-top: 10px;
+}
+
+#soWhatContent {
+  margin: 15px 0 0 35px;
+  width: 90%;
 }
 
 #solution {
