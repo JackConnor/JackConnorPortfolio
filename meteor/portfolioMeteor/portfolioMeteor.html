@@ -37,7 +37,7 @@
     <div class="row">
       <div class="siteTitle col-sm-6 col-sm-offset-1 col-xs-12">
         <h1 id="titleName">Jack Connor</h1>
-        <p id='titleDescription'>Javascript Full-Stack Developer | Science Lover | Skateboard Aficionado</p>
+        <p id='titleDescription'>Full-Stack Javascript Developer | Astrophyics Lover | Skateboard Afficionado</p>
       </div>
       <div class="row">
         <div class="col-sm-6 col-sm-offset-6 col-xs-12">
@@ -58,9 +58,9 @@
 
 <template name="aboutMe">
   <div class="aboutmecontainer container-fluid">
-    <div class="row">
+    <div class="row bottomRow">
       <div class="imagesContainer">
-        <div class="col-sm-4 col-xs-12">
+        <div class="col-sm-4 col-xs-12 catMar">
           <div class="cat" id="javascript">
             <div class="imageHolder">
               <img class="category" src="https://jresponse.net/blog/wp-content/uploads/2015/04/javascript-logo-png.png" alt="" />
@@ -97,8 +97,12 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div id="clickCategory" class='col-xs-10 col-xs-offset-1'>
+          <h3 >(click a technology above and see some projects)</h3>
+        </div>
+      </div>
     </div>
-    <h3 id="clickCategory">(click a technology above and see some projects)</h3>
   </div>
 </template>
 
@@ -204,30 +208,7 @@
         </div>
       </div>
     </div>
-    <!-- <div class="row">
-      <div class="col-sm-6 col-xs-12">
-         Inside of responsive container left
-        <div class="links">
-          <div class="">
-            {{data.project_link}}
-          </div>
-          <div class="">
-            {{data.github_link}}
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-xs-12"> -->
-        <!--  Inside of responsive container right-->
-        <!-- <div class="members">
-          Team Member:
-          {{#each members}}
-            {{name}}
-          {{/each}}
-        </div>
-      </div>
-    </div> -->
   </div>
-  <button type="button" id="backAll">go back to all projects</button>
 </template>
 
 <template name="projects">
