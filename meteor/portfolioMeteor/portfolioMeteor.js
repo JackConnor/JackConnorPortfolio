@@ -259,6 +259,24 @@ if (Meteor.isClient) {
     "mouseleave #morePhotos": function(){
       $('#morePhotos').css('opacity', 0.1);
       $('#backPhotos').css('opacity', 0.1);
+    },
+    'mouseenter #titleTitle':function(){
+      $('#titleTitle').animate({'fontSize': '62px'})
+    },
+    'mouseleave #titleTitle': function(){
+      $('#titleTitle').animate({'fontSize': '56px'})
+    },
+    'mouseenter #challenge': function(){
+      $('#challengeTitle').animate({'fontSize': "36px"})
+    },
+    'mouseleave #challenge': function(){
+      $('#challengeTitle').animate({'fontSize': "30px"})
+    },
+    'mouseenter #solution': function(){
+      $('#solutionTitle').animate({'fontSize': "36px"})
+    },
+    'mouseleave #solution': function(){
+      $('#solutionTitle').animate({'fontSize': "30px"})
     }
   })
 

@@ -150,12 +150,14 @@
       </div>
       <!-- end video/photo spieler thingy -->
       <div id="project_info" class="col-sm-6 col-xs-12">
-        <div>
-          <h1>{{data.name}}</h1>
-          <h2>My role: {{data.role}}</h2>
+        <div class='singleTitle'>
+          <h1 id='titleTitle'>{{data.allData.name}}</h1>
         </div>
-        <div id="project_description">
-          <h2>Description of the project: {{data.description}}</h2>
+        <div id="challenge">
+          <h2 id="challengeTitle">The Challenge:</h2><p>{{data.allData.content.problem}}</p>
+        </div>
+        <div id="solution">
+          <h2 id="solutionTitle">The Solution:</h2><p>{{data.allData.content.solution}}</p>
         </div>
       </div>
     </div>
