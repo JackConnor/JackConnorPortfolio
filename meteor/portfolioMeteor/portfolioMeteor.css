@@ -265,10 +265,11 @@ li {
 }
 
 .singleProjectContainer {
-  /*background-color: yellow;*/
+  background-color: #CADCDE;
   height: 700px;
   padding-bottom: 10px;
   width: 100%;
+
 }
 
 .siteTitle {
@@ -305,18 +306,16 @@ li {
 }
 
 .thumbContainer {
-  outline: 2px solid blue;
   height: 130px;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .thumbHolder {
   padding-top: 5px;
-  height: 120px;
-  outline: 2px solid gray;
-  width: 130%;
-  min-width: 750px;
+  height: 130px;
+  width: 1620px;
+  background-color: darkseagreen;
 }
 
 .thumbPhoto {
@@ -335,13 +334,13 @@ li {
 
 .viewBox {
   position: absolute;
-  border-top: 20px solid orange;
-  border-bottom: 20px solid orange;
+  border-top: 25px solid orange;
+  border-bottom: 25px solid orange;
   border-right: 6px solid orange;
   border-left: 6px solid orange;
   width: 130px;
-  height: 160px;
-  margin: -20px 0 0 -1px;
+  height: 190px;
+  margin: -30px 0 0 -1px;
 }
 
 /* begin id elements */
@@ -366,7 +365,7 @@ li {
 }
 
 #morePhotos {
-  margin: -135px 0 0 353px;
+  margin: -135px 0 0 80%;
   background-color: #0B2161;
   height: 135px;
   width: 60px;
@@ -377,8 +376,6 @@ li {
 }
 
 #photo-carousel-holder {
-  background-color: white;
-  /*height: 650px;*/
   min-height: 100%;
   padding-bottom: 20px;
 }
