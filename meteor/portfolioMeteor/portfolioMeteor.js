@@ -29,7 +29,7 @@ if (Meteor.isClient) {
     },
     'mouseenter .siteTitle': function(){
       $('#titleName').animate({
-        fontSize: "63px"
+        fontSize: "60px",
       })
     },
     'mouseleave .siteTitle': function(){
@@ -312,9 +312,7 @@ if (Meteor.isClient) {
 
   Template.singleProject.helpers({
     data: function(){
-      // Session.set('singleCounter', !Session.get('singleCounter'));
       return Session.get('currentProject');
-      // return Session.get('singlePhotosArray');
     },
     photoThumbs: function(){
       var photoArray = Session.get('singlePhotosArray');

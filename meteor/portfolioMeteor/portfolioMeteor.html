@@ -37,7 +37,7 @@
     <div class="row">
       <div class="siteTitle col-sm-6 col-sm-offset-1 col-xs-12">
         <h1 id="titleName">Jack Connor</h1>
-        <p>Javascript Full-Stack Developer | Science Lover | Skateboard Aficionado</p>
+        <p id='titleDescription'>Javascript Full-Stack Developer | Science Lover | Skateboard Aficionado</p>
       </div>
       <div class="row">
         <div class="col-sm-6 col-sm-offset-6 col-xs-12">
@@ -122,7 +122,7 @@
     <!-- begin video/photo spieler thingy -->
     <div class="row">
       <div id="photo-carousel-holder" class="col-sm-6 col-xs-12">
-        <img class='currentPhoto' src="{{media}}" alt="" /><br>
+        <img class='currentPhoto' id='carousel' src="{{media}}" alt="" /><br>
         <button class="" id='backPhotos'>&lt;</button>
         <button class='' id='morePhotos'>&gt;</button>
         <div class="thumbContainer">
@@ -146,7 +146,6 @@
             </div>
           </div>
         </div>
-
       </div>
       <!-- end video/photo spieler thingy -->
       <div id="project_info" class="col-sm-6 col-xs-12">
@@ -162,10 +161,39 @@
       </div>
     </div>
   </div>
+
   <div class="bottom_container container-fluid">
     <div class="row">
       <div class="col-sm-6 col-xs-12">
-        <!--  Inside of responsive container left-->
+        <div class="linksContainer">
+          <h2>links</h2>
+          <a href="{{data.allData.links.live}}" target="_blank">
+            <div class="live">
+              <h3>Go to Website</h3>
+            </div>
+          </a>
+          <a href="{{data.allData.links.github}}" target="_blank">
+            <div class="github">
+              <h3>See the code at this project's Github</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <div class="descriptionsContainer">
+          <h2>Technology Used for {{data.allData.name}}</h2>
+          <p>
+            {{data.allData.content.long}}
+          </p>
+          <p>
+            {{data.allData.content.technology_used}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-sm-6 col-xs-12">
+         Inside of responsive container left
         <div class="links">
           <div class="">
             {{data.project_link}}
@@ -175,16 +203,16 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-xs-12">
+      <div class="col-sm-6 col-xs-12"> -->
         <!--  Inside of responsive container right-->
-        <div class="members">
+        <!-- <div class="members">
           Team Member:
           {{#each members}}
             {{name}}
           {{/each}}
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <button type="button" id="backAll">go back to all projects</button>
 </template>
@@ -202,18 +230,18 @@
     </div>
     <div class="row">
       {{#each projectList}}
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="projects" >
-            <img src="{{photo}}" id="{{data.name}}" class="projectPhoto"/>
-            <div class="popout">built with: {{data.content.technology_used}}</div>
-            <div class="infoProject">
-              <h2>{{data.name}}</h2>
-              <p>
-                {{data.content.short}}
-              </p>
-            </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="projects" >
+          <img src="{{photo}}" id="{{data.name}}" class="projectPhoto"/>
+          <div class="popout">built with: {{data.content.technology_used}}</div>
+          <div class="infoProject">
+            <h2>{{data.name}}</h2>
+            <p>
+              {{data.content.short}}
+            </p>
           </div>
         </div>
+      </div>
       {{/each}}
     </div>
   </div>
