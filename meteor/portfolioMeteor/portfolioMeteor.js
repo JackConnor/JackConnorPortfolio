@@ -12,9 +12,12 @@ if (Meteor.isClient) {
   Session.setDefault('introCounter', true);
   Session.setDefault('numero', true);
   Session.setDefault('singleCounter', false);
+  Session.setDefault('singlePhotosArray', false);
+  // Session.setDefault('currentPhoto', "sure");
   Session.setDefault('aboutMeCounter', false);
   Session.setDefault('currentProject', null);
   Session.setDefault('currentCategory', null);
+  Session.setDefault('photoCounter', 0);
 
   Template.navbar.helpers({
 
@@ -101,25 +104,40 @@ if (Meteor.isClient) {
 
   Template.projects.events({
     'click .projects': function(evt){
-      Session.set('singleCounter', !Session.get('singleCounter'));
+      console.log('working?');
+      console.log(evt);
+      // Session.set('singleCounter', !Session.get('singleCounter'));
       if(evt.target.id[0] == "O") {
         var id = evt.target.id;
-        console.log(id);
-        var currProj = Projects.findOne(id);
+        var dataCall = Projects.findOne(id);
+        var currProj = {allData: dataCall, media: dataCall.media};
         Session.set('currentProject', currProj);
-        console.log(Session.get('currentProject'));
+        Session.set('singlePhotosArray', currProj.media)
+        Session.set('currentPhoto', currProj.media[0].url);
+        console.log(Session.get('currentPhoto'));
+
       }else if(evt.target.id){
         var name = evt.target.id;
-        console.log(name);
-        var currProj = Projects.findOne({"name": name});
+        var dataCall = Projects.findOne({"name": name});
+        var currProj = {allData: dataCall, media: dataCall.media};
+        Session.set('singlePhotosArray', currProj.media)
         Session.set('currentProject', currProj);
-        console.log(Session.get('currentProject'));
+        Session.set('currentPhoto', currProj.media[0].url);
+        console.log(Session.get('currentPhoto'));
+
+
       }else{
         var name = $(evt.target);
-        var currProj = Projects.findOne({"name": name.context.innerText});
+        var dataCall = Projects.findOne({"name": name.context.innerText});
+        var currProj = {allData: dataCall, media: dataCall.media};
+        Session.set('currentPhoto', currProj.media[0].url);
+        Session.set('singlePhotosArray', currProj.media)
         Session.set('currentProject', currProj);
-        console.log(Session.get('currentProject'));
+        console.log(Session.get('currentPhoto').url);
+
       }
+      Session.set('singleCounter', !Session.get('singleCounter'));
+
     },
     'mouseenter .projectPhoto':function(evt){
       var target = $(evt.target);
@@ -165,6 +183,14 @@ if (Meteor.isClient) {
   Template.singleProject.events({
     'click #backAll': function(){
       Session.set('singleCounter', !Session.get('singleCounter'));
+    },
+    'click #morePhotos': function(evt){
+      Session.set('photoCounter', Session.get('photoCounter')+1);
+      var count = Session.get('photoCounter');
+      var photos = Session.get('singlePhotosArray');
+      console.log(photos);
+      var newUrl = photos[count].url;
+      Session.set('currentPhoto', newUrl)
 
     }
   })
@@ -173,7 +199,13 @@ if (Meteor.isClient) {
     data: function(){
       // Session.set('singleCounter', !Session.get('singleCounter'));
       return Session.get('currentProject');
+      return Session.get('singlePhotosArray');
     },
+    media: function(){
+        var photo = Session.get('currentPhoto');
+        return photo;
+        // return {first: photo[0].url, second: photo[1].url, third: photo[2].url, fourth: photo[3].url, video: photo[4].url};
+      },
     members: function(){
       var team_members = [Session.get('currentProject').members, {name:"jack"}]
       return team_members;
