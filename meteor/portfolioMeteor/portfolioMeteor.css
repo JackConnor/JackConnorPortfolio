@@ -43,7 +43,7 @@ li {
 
 .bottom_container {
   height: 400px;
-  background-color: #dfeaeb;
+  background-color: #CADCDE;
   margin: 15px 0 0 0;
   display: block;
 }
@@ -128,13 +128,13 @@ li {
 
 .currentPhoto{
   outline: 10px solid gray;
-  width: 90%;
-  margin: 50px 0 0 5%;
+  width: 80%;
+  margin: 50px 0 0 10%;
 }
 
 .descriptionsContainer {
     height: 300px;
-    outline: 3px solid blue;
+    background-color: #92E2E7;
 }
 
 .descriptionsContainer p {
@@ -153,8 +153,27 @@ li {
   color: black;
 }
 
+.github h2{
+  font-size: 38px;
+  padding-top: 25px;
+  color: gray;
+}
+
+.github p{
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
+  margin-top: -10px;
+  opacity: 0;
+}
+
 .github:hover {
   background-color: #77ECF3;
+  text-decoration: none;
+}
+
+.github:visited {
+  text-decoration: none;
 }
 
 .imagesContainer {
@@ -210,6 +229,17 @@ li {
   margin-top: 0px
 }
 
+.links {
+  height: 350px;
+  background-color: pink;
+  display: grid;
+}
+
+.linksContainer {
+  height: 300px;
+  text-align: center;
+}
+
 .live {
   background-color: #A0FDEF;
   height: 110px;
@@ -220,19 +250,23 @@ li {
   color: black;
 }
 
+.live p{
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
+  margin-top: -10px;
+  opacity: 0;
+}
+
+
+.live h2{
+  font-size: 38px;
+  padding-top: 25px;
+  color: gray;
+}
+
 .live:hover {
   background-color: #77ECF3;
-}
-
-.links {
-  height: 350px;
-  background-color: pink;
-  display: grid;
-}
-
-.linksContainer {
-  height: 300px;
-  outline: 3px solid green;
 }
 
 .members {
@@ -348,11 +382,32 @@ li {
 .siteTitle p{
   margin: -10px 0 0 0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 19px;
 }
 
 .siteTitle h1 {
   font-size: 56px;
+}
+
+.tech{
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.techList {
+
+}
+
+.techStack {
+  /*outline: 2px solid yellow;*/
+  width: 80%;
+  margin: 0 auto;
+  height: 110px;
+  text-align: center;
+  background-color: #EBD3EB;
+  color: #5B585B;
 }
 
 .techTitle {
@@ -382,7 +437,7 @@ li {
   padding-top: 5px;
   height: 130px;
   width: 1620px;
-  background-color: darkseagreen;
+  background-color: #FADCFA;
 }
 
 .thumbPhoto {
@@ -421,7 +476,7 @@ li {
 }
 
 #backPhotos {
-  margin: -275px 0 0 4%;
+  margin: -275px 0 0 9.3%;
   background-color: #0B2161;
   height: 135px;
   width: 14%;
@@ -448,7 +503,7 @@ li {
 }
 
 #morePhotos {
-  margin: -275px 0 0 76%;
+  margin: -275px 0 0 72.3%;
   background-color: #0B2161;
   height: 135px;
   width: 14%;
@@ -466,6 +521,10 @@ li {
 #project_info {
   /*background-color: tomato;*/
   height: 100%;
+}
+
+#soWhat {
+  
 }
 
 #solution {

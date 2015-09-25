@@ -1,5 +1,5 @@
 // db.projects.insert({
-//   name: "reBoundend",
+//   name: "reBound",
 //   completion_date: "06-15-2015",
 //   role: "javascript developer",
 //   teammates: [
@@ -12,7 +12,7 @@
 //     solution: "kdsjflksdjfk ljsdlkfj lksd jflksdjf ", technology_used: "javascript jquery html/css"},
 //   links: {
 //     github: "https://github.com/JackConnor/reBound",
-//     live: "http://rebound.bitballoon.org/"
+//     live: "http://rebound.bitballoon.com/"
 //   },
 //   media: [
 //     {"url": "http://www.everything-microsoft.com/wp-content/uploads/2012/05/973729_f520-400x400.jpg"},

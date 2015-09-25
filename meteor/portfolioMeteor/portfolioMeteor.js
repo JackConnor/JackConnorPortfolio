@@ -307,6 +307,24 @@ if (Meteor.isClient) {
     },
     'mouseleave #solution': function(){
       $('#solutionTitle').animate({'fontSize': "30px"})
+    },
+    'mouseenter .github': function(){
+      $('#hiddenDesc').css("opacity", 1);
+    },
+    'mouseleave .github': function(){
+      $('#hiddenDesc').css('opacity', 0);
+    },
+    'mouseenter .live': function(){
+      $('#hiddenTitle').css("opacity", 1);
+    },
+    'mouseleave .live': function(){
+      $('#hiddenTitle').css('opacity', 0);
+    },
+    'mouseenter .descriptionsContainer': function(){
+      $('#soWhat').animate({'fontSize': "36px"})
+    },
+    'mouseleave .descriptionsContainer': function(){
+      $('#soWhat').animate({'fontSize': "30px"})
     }
   })
 
@@ -325,6 +343,12 @@ if (Meteor.isClient) {
     members: function(){
       var team_members = [Session.get('currentProject').members, {name:"jack"}]
       return team_members;
+    },
+    technologies: function(){
+      var techString = Session.get('currentProject').allData.content.technology_used;
+      console.log(techString);
+      var parsed = techString.split(" ")
+      return ({first: parsed[0], second: parsed[1], third: parsed[2]});
     }
   })
 
