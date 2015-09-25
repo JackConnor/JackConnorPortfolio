@@ -184,7 +184,7 @@ if (Meteor.isClient) {
     'click #backAll': function(){
       Session.set('singleCounter', !Session.get('singleCounter'));
     },
-    'click #morePhotos': function(evt){
+    'click #morePhotos': function(evt){ 
       Session.set('photoCounter', Session.get('photoCounter')+1);
       var count = Session.get('photoCounter');
       var photos = Session.get('singlePhotosArray');
