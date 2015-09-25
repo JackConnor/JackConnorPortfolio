@@ -12,8 +12,8 @@ if (Meteor.isClient) {
   Session.setDefault('introCounter', true);
   Session.setDefault('numero', true);
   Session.setDefault('singleCounter', false);
-  Session.setDefault('singlePhotosArray', false);
-  // Session.setDefault('currentPhoto', "sure");
+  Session.setDefault('singlePhotosArray', []);
+  Session.setDefault('photoMarginLeft', 0);
   Session.setDefault('aboutMeCounter', false);
   Session.setDefault('currentProject', null);
   Session.setDefault('currentCategory', null);
@@ -137,7 +137,6 @@ if (Meteor.isClient) {
 
       }
       Session.set('singleCounter', !Session.get('singleCounter'));
-
     },
     'mouseenter .projectPhoto':function(evt){
       var target = $(evt.target);
@@ -185,20 +184,81 @@ if (Meteor.isClient) {
       Session.set('singleCounter', !Session.get('singleCounter'));
     },
     'click #morePhotos': function(evt){
-      Session.set('photoCounter', Session.get('photoCounter')+1);
+      console.log(count);
       var count = Session.get('photoCounter');
-      var photos = Session.get('singlePhotosArray');
-      console.log(photos);
-      var newUrl = photos[count].url;
-      Session.set('currentPhoto', newUrl)
+      if  (count >= 4) {
+        Session.set('photoCounter', 4);
+      } else if(count <= 0){
+        Session.set('photoCounter', 1);
+        var count = 1;
+        var photos = Session.get('singlePhotosArray');
+        console.log(photos);
+        var newUrl = photos[count].url;
+        Session.set('currentPhoto', newUrl);
+        //begin moving the photo holder
+        var margin = Session.get('photoMarginLeft');
+        var newMargin = (margin - 124);
+        $('.thumbHolder').animate({"margin-left": newMargin+"px"});
+        Session.set('photoMarginLeft', newMargin);
+      } else{
+        Session.set('photoCounter', Session.get('photoCounter')+1);
+        var newCount = Session.get('photoCounter');
+        var photos = Session.get('singlePhotosArray');
+        console.log(photos);
+        var newUrl = photos[newCount].url;
+        Session.set('currentPhoto', newUrl);
+        //begin moving the photo holder
+        var margin = Session.get('photoMarginLeft');
+        var newMargin = (margin - 124);
+        $('.thumbHolder').animate({"margin-left": newMargin+"px"});
+        Session.set('photoMarginLeft', newMargin);
+      }
     },
     'click #backPhotos': function(){
-      Session.set('photoCounter', Session.get('photoCounter')-1);
-      var count = Session.get('photoCounter');
-      var photos = Session.get('singlePhotosArray');
-      console.log(photos);
-      var newUrl = photos[count].url;
-      Session.set('currentPhoto', newUrl)
+      if  (count >= 4) {
+          Session.set('photoCounter', 4);
+        } else if(count < 0){
+          Session.set('photoCounter', 0);
+        } else{
+        Session.set('photoCounter', Session.get('photoCounter')-1);
+        var count = Session.get('photoCounter');
+        var photos = Session.get('singlePhotosArray');
+        console.log(photos);
+        var newUrl = photos[count].url;
+        Session.set('currentPhoto', newUrl)
+        var margin = Session.get('photoMarginLeft');
+        var newMargin = (margin + 124);
+        $('.thumbHolder').animate({"margin-left": newMargin+"px"});
+        Session.set('photoMarginLeft', newMargin);
+      }
+    },
+
+    'mouseenter .currentPhoto': function(){
+      $('#backPhotos').css('opacity', 0.3);
+      $('#morePhotos').css('opacity', 0.3);
+      // $('#backPhotos').css('background-color', "#0B2161");
+    },
+    'mouseleave .currentPhoto': function(){
+      $('#backPhotos').css('opacity', 0.1);
+      $('#morePhotos').css('opacity', 0.1);
+    },
+    "mouseenter #backPhotos": function(){
+      $('#backPhotos').css('opacity', 0.7);
+      $('#morePhotos').css('opacity', 0.3);
+    },
+    "mouseleave #backPhotos": function(){
+      $('#backPhotos').css('opacity', 0.1);
+      $('#morePhotos').css('opacity', 0.1);
+
+    },
+    "mouseenter #morePhotos": function(){
+      $('#morePhotos').css('opacity', 0.7);
+      $('#backPhotos').css('opacity', 0.3);
+
+    },
+    "mouseleave #morePhotos": function(){
+      $('#morePhotos').css('opacity', 0.1);
+      $('#backPhotos').css('opacity', 0.1);
     }
   })
 
@@ -206,13 +266,17 @@ if (Meteor.isClient) {
     data: function(){
       // Session.set('singleCounter', !Session.get('singleCounter'));
       return Session.get('currentProject');
-      return Session.get('singlePhotosArray');
+      // return Session.get('singlePhotosArray');
+    },
+    photoThumbs: function(){
+      var photoArray = Session.get('singlePhotosArray');
+      return {first: photoArray[0], second: photoArray[1], third: photoArray[2], fourth: photoArray[3], fifth: photoArray[4]}
     },
     media: function(){
-        var photo = Session.get('currentPhoto');
-        return photo;
-        // return {first: photo[0].url, second: photo[1].url, third: photo[2].url, fourth: photo[3].url, video: photo[4].url};
-      },
+      var photo = Session.get('currentPhoto');
+      return photo;
+      // return {first: photo[0].url, second: photo[1].url, third: photo[2].url, fourth: photo[3].url, video: photo[4].url};
+    },
     members: function(){
       var team_members = [Session.get('currentProject').members, {name:"jack"}]
       return team_members;

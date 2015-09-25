@@ -111,9 +111,9 @@ li {
 }
 
 .currentPhoto{
-  outline: 2px solid black;
+  outline: 10px solid gray;
   width: 90%;
-  margin: 0 0 0 5%;
+  margin: 20px 0 0 5%;
 }
 
 .imagesContainer {
@@ -304,6 +304,46 @@ li {
   opacity: 0;
 }
 
+.thumbContainer {
+  outline: 2px solid blue;
+  height: 130px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.thumbHolder {
+  padding-top: 5px;
+  height: 120px;
+  outline: 2px solid gray;
+  width: 130%;
+  min-width: 750px;
+}
+
+.thumbPhoto {
+  width: 120px;
+  height: 120px;
+  /*outline: 2px solid red;*/
+  display: inline-block;
+}
+
+.thumbPhoto img {
+  width: 90%;
+  height: 90%;
+  margin: 5% 0 0 10px;
+  outline: 2px solid green;
+}
+
+.viewBox {
+  position: absolute;
+  border-top: 20px solid orange;
+  border-bottom: 20px solid orange;
+  border-right: 6px solid orange;
+  border-left: 6px solid orange;
+  width: 130px;
+  height: 160px;
+  margin: -20px 0 0 -1px;
+}
+
 /* begin id elements */
 #catProjectContainer {
   outline: 1px solid gray;
@@ -314,9 +354,33 @@ li {
   color: #A0A0A0;
 }
 
+#backPhotos {
+  margin: -135px 0 0 22px;
+  background-color: #0B2161;
+  height: 135px;
+  width: 60px;
+  opacity: .1;
+  font-size: 80px;
+  color: white;
+  position: absolute;
+}
+
+#morePhotos {
+  margin: -135px 0 0 353px;
+  background-color: #0B2161;
+  height: 135px;
+  width: 60px;
+  opacity: .1;
+  font-size: 80px;
+  color: white;
+  position: absolute;
+}
+
 #photo-carousel-holder {
   background-color: white;
-  height: 650px;
+  /*height: 650px;*/
+  min-height: 100%;
+  padding-bottom: 20px;
 }
 
 #project_info {
