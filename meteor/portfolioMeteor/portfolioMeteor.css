@@ -37,12 +37,15 @@ li {
 
 .button{
   display: inline-block;
+  margin-left: 5px;
   height: 65px;
-  outline: 3px solid #979797;
+  background-color: #BFFAD5;
+  border-right: 4px solid #EEC5B5;
+  /*outline: 3px solid #979797;*/
   text-align: center;
   color: #525252;
-  font-size: 24px;
-  margin: 0 0 0 0;
+  font-size: 22px;
+  margin: 0 0 4px 0;
 }
 
 .button p{
@@ -184,6 +187,7 @@ li {
 .navButtons {
   display: block;
   margin-top: 42px;
+  margin-right: 5%;
 }
 
 .navbuttons div p {
@@ -193,7 +197,7 @@ li {
 .navcontainer {
   min-height: 200px;
   height: 100%;
-  border-bottom: 2px solid gray;
+  background-color: #EEC5B5;
 }
 
 .navcontainer h1 {
@@ -279,12 +283,12 @@ li {
 .siteTitle {
   /*margin: 0 0 0 10%;*/
   display: block;
-  
+  font-size: 56px;
   /*text-align: center;*/
 }
 
 .siteTitle p{
-  margin: 9px 0 0 0;
+  margin: 0px 0 0 0;
   font-weight: bold;
   font-size: 16px;
 }

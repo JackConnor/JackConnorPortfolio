@@ -27,9 +27,14 @@ if (Meteor.isClient) {
     'click .siteTitle': function(){
       Session.set('singleCounter', false)
     },
-    'mouseover .siteTitle': function(){
-      $('.siteTitle').animate({
-        'outline': "4px solid gray"
+    'mouseenter .siteTitle': function(){
+      $('#titleName').animate({
+        fontSize: "63px"
+      })
+    },
+    'mouseleave .siteTitle': function(){
+      $('#titleName').animate({
+        fontSize: "56px"
       })
     }
   })
