@@ -122,11 +122,31 @@
     <!-- begin video/photo spieler thingy -->
     <div class="row">
       <div id="photo-carousel-holder" class="col-sm-6 col-xs-12">
-        <img class='currentPhoto' src="{{media}}" alt="" />
-        <p>
-          {{media}}
-        </p>
-        <button type="button" id='morePhotos'></button>
+        <img class='currentPhoto' src="{{media}}" alt="" /><br>
+        <button class="" id='backPhotos'>&lt;</button>
+        <button class='' id='morePhotos'>&gt;</button>
+        <div class="thumbContainer">
+          <div class="viewBox"></div>
+          <div class="thumbHolder">
+            <!-- viewbox is for seeing current project -->
+            <div class="thumbPhoto">
+              <img src="{{photoThumbs.first.url}}" alt="" />
+            </div>
+            <div class="thumbPhoto">
+              <img src="{{photoThumbs.second.url}}" alt="" />
+            </div>
+            <div class="thumbPhoto">
+              <img src="{{photoThumbs.third.url}}" alt="" />
+            </div>
+            <div class="thumbPhoto">
+              <img src="{{photoThumbs.fourth.url}}" alt="" />
+            </div>
+            <div class="thumbPhoto" id="video">
+              <img src="{{photoThumbs.fifth.url}}" alt="" />
+            </div>
+          </div>
+        </div>
+
       </div>
       <!-- end video/photo spieler thingy -->
       <div id="project_info" class="col-sm-6 col-xs-12">
