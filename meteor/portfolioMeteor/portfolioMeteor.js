@@ -266,29 +266,33 @@ if (Meteor.isClient) {
     'mouseenter .currentPhoto': function(){
       $('#backPhotos').css('opacity', 0.3);
       $('#morePhotos').css('opacity', 0.3);
-      // $('#backPhotos').css('background-color', "#0B2161");
+      $('.thumbHolder').css('background-color', '#FEB1D2')
     },
     'mouseleave .currentPhoto': function(){
       $('#backPhotos').css('opacity', 0.1);
       $('#morePhotos').css('opacity', 0.1);
+      $('.thumbHolder').css('background-color', '#FCCECE')
+
     },
     "mouseenter #backPhotos": function(){
       $('#backPhotos').css('opacity', 0.7);
       $('#morePhotos').css('opacity', 0.3);
+      $('.thumbHolder').css('background-color', '#FEB1D2')
     },
     "mouseleave #backPhotos": function(){
       $('#backPhotos').css('opacity', 0.1);
       $('#morePhotos').css('opacity', 0.1);
-
+      $('.thumbHolder').css('background-color', '#FCCECE')
     },
     "mouseenter #morePhotos": function(){
       $('#morePhotos').css('opacity', 0.7);
       $('#backPhotos').css('opacity', 0.3);
-
+      $('.thumbHolder').css('background-color', '#FEB1D2')
     },
     "mouseleave #morePhotos": function(){
       $('#morePhotos').css('opacity', 0.1);
       $('#backPhotos').css('opacity', 0.1);
+      $('.thumbHolder').css('background-color', '#FCCECE')
     },
     'mouseenter #titleTitle':function(){
       $('#titleTitle').animate({'fontSize': '62px'})
