@@ -166,28 +166,41 @@
     <div class="row">
       <div class="col-sm-6 col-xs-12">
         <div class="linksContainer">
-          <h2>links</h2>
           <a href="{{data.allData.links.live}}" target="_blank">
             <div class="live">
-              <h3>Go to Website</h3>
+              <h2>Go to Website</h2>
+              <p id='hiddenTitle'>See this Live</p>
+
             </div>
           </a>
           <a href="{{data.allData.links.github}}" target="_blank">
             <div class="github">
-              <h3>See the code at this project's Github</h3>
+              <h2>Go to Github</h2>
+              <p id='hiddenDesc'>See the Code</p>
             </div>
           </a>
         </div>
       </div>
       <div class="col-sm-6 col-xs-12">
         <div class="descriptionsContainer">
-          <h2>Technology Used for {{data.allData.name}}</h2>
+          <h2 id='soWhat'>So, what is {{data.allData.name}}?</h2>
           <p>
             {{data.allData.content.long}}
           </p>
-          <p>
-            {{data.allData.content.technology_used}}
-          </p>
+          <div class="techStack">
+            <h3>Technology Used in this Project</h3>
+            <div class="techList">
+              <div class="tech">
+                >{{technologies.first}}
+              </div>
+              <div class="tech">
+                >{{technologies.second}}
+              </div>
+              <div class="tech">
+                >{{technologies.third}}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
