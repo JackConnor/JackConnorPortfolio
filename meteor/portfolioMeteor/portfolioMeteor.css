@@ -269,7 +269,11 @@ li {
   height: 700px;
   padding-bottom: 10px;
   width: 100%;
+}
 
+.singleTitle h1{
+  font-size: 56px;
+  font-weight: bolder;
 }
 
 .siteTitle {
@@ -354,21 +358,37 @@ li {
 }
 
 #backPhotos {
-  margin: -135px 0 0 22px;
+  margin: -135px 0 0 4%;
   background-color: #0B2161;
   height: 135px;
-  width: 60px;
+  width: 14%;
   opacity: .1;
   font-size: 80px;
   color: white;
   position: absolute;
 }
 
+#challenge {
+  background-color: aqua;
+  height: 230px;
+  padding: 2px 0 0 10px;
+  margin: 20px 0 0 0;
+}
+
+#challenge h1 {
+  font-size: 30px;
+}
+
+#challenge p {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
 #morePhotos {
-  margin: -135px 0 0 80%;
+  margin: -135px 0 0 76%;
   background-color: #0B2161;
   height: 135px;
-  width: 60px;
+  width: 14%;
   opacity: .1;
   font-size: 80px;
   color: white;
@@ -381,15 +401,20 @@ li {
 }
 
 #project_info {
-  background-color: tomato;
-  height: 200px;
-  /*width: 300px;
-  display: inline-block;*/
+  /*background-color: tomato;*/
+  height: 100%;
 }
 
-#project_description {
-  background-color: aqua;
-  height: 350px;
-  /*width: 300px;
-  display: inline-block;*/
+#solution {
+  height: 280px;
+  background-color: #E7EDF0;
+}
+
+#solution h2 {
+  font-size: 30px;
+}
+
+#solution p {
+  font-weight: bolder;
+  font-size: 20px;
 }
