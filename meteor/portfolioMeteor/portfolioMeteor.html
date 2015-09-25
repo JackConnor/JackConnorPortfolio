@@ -119,18 +119,17 @@
 
 <template name="singleProject">
   <div class="singleProjectContainer container-fluid">
+    <!-- begin video/photo spieler thingy -->
     <div class="row">
-      <div id="project_photo" class="col-md-6 col-xs-12">
-        <div class="pure-g">
-          <div class="pure-u-4-5 photo_container">
-            <img src="{{data.media.photo1}}"/>
-            <p>
-              {{data.media[0]}}
-            </p>
-          </div>
-        </div>
+      <div id="photo-carousel-holder" class="col-sm-6 col-xs-12">
+        <img class='currentPhoto' src="{{media}}" alt="" />
+        <p>
+          {{media}}
+        </p>
+        <button type="button" id='morePhotos'></button>
       </div>
-      <div id="project_info" class="col-md-6 col-xs-12">
+      <!-- end video/photo spieler thingy -->
+      <div id="project_info" class="col-sm-6 col-xs-12">
         <div>
           <h1>{{data.name}}</h1>
           <h2>My role: {{data.role}}</h2>
@@ -143,7 +142,7 @@
   </div>
   <div class="bottom_container container-fluid">
     <div class="row">
-      <div class="col-md-6 col-xs-12">
+      <div class="col-sm-6 col-xs-12">
         <!--  Inside of responsive container left-->
         <div class="links">
           <div class="">
@@ -154,7 +153,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-xs-12">
+      <div class="col-sm-6 col-xs-12">
         <!--  Inside of responsive container right-->
         <div class="members">
           Team Member:
@@ -189,6 +188,7 @@
               <h2>{{name}}</h2>
               <p>
                 {{description}}
+                {{content.short}}
               </p>
             </div>
           </div>
