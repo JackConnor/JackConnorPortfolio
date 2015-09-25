@@ -24,7 +24,14 @@ if (Meteor.isClient) {
   });
 
   Template.navbar.events({
-
+    'click .siteTitle': function(){
+      Session.set('singleCounter', false)
+    },
+    'mouseover .siteTitle': function(){
+      $('.siteTitle').animate({
+        'outline': "4px solid gray"
+      })
+    }
   })
 
   Template.aboutMe.events({
@@ -164,9 +171,27 @@ if (Meteor.isClient) {
 
   Template.projects.helpers({
     projectList: function(){
-      var ps = Projects.find();
-      console.log(ps);
-      return ps;
+
+      var photos = [];
+      var combo = [];
+
+      var projects = Projects.find();
+      console.log(projects[0]);
+
+      projects.forEach(function(data){
+        console.log(data.media[0].url);
+        photos.push(data.media[0].url);
+      })
+
+      projects.forEach(function(data, photos){
+        combo.push({data: data, photo: data.media[0].url})
+      })
+
+
+      // for (var j = 0; j < ps.length; j++) {
+      //   combo.push({data: ps[j], photo: photos[j]})
+      // }
+      return combo;
     },
     singleProjectDetails: function(){
       //counter stuff
@@ -293,7 +318,6 @@ if (Meteor.isClient) {
     media: function(){
       var photo = Session.get('currentPhoto');
       return photo;
-      // return {first: photo[0].url, second: photo[1].url, third: photo[2].url, fourth: photo[3].url, video: photo[4].url};
     },
     members: function(){
       var team_members = [Session.get('currentProject').members, {name:"jack"}]
