@@ -17,6 +17,7 @@ if (Meteor.isClient) {
   Session.setDefault('currentProject', null);
   Session.setDefault('currentCategory', null);
   Session.setDefault('photoCounter', 0);
+  Session.setDefault('contactSwitch', false);
 
   Template.navbar.helpers({
 
@@ -24,7 +25,8 @@ if (Meteor.isClient) {
 
   Template.navbar.events({
     'click .siteTitle': function(){
-      Session.set('singleCounter', false)
+      Session.set('singleCounter', false);
+      Session.set('numero', true);
     },
     'mouseenter .siteTitle': function(){
       $('#titleName').animate({
@@ -35,6 +37,11 @@ if (Meteor.isClient) {
       $('#titleName').animate({
         fontSize: "56px"
       })
+    },
+    'click #contact': function(){
+      Session.set('singleCounter', false);
+      Session.set('numero', false);
+      Session.set('contactSwitch', true);
     }
   })
 
@@ -367,6 +374,9 @@ if (Meteor.isClient) {
     },
     toggle: function(){
       return Session.get('aboutMeCounter');
+    },
+    contactSwitch: function(){
+      return Session.get('contactSwitch');
     }
   });
 

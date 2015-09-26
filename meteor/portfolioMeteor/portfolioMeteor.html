@@ -1,15 +1,9 @@
 <head>
   <title>Jack Connor Portfolio</title>
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-  <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-<![endif]-->
-<!--[if gt IE 8]><!-->
     <link rel="stylesheet " href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
 <!--<![endif]-->
-
 </head>
-
 <body>
   <div class="appContainer">
 
@@ -18,7 +12,6 @@
   </div>
   <script src="scripts.js" charset="utf-8"></script>
 </body>
-
 <!--end body and start templates-->
 
 <template name="intro">
@@ -45,8 +38,8 @@
             <div class="row">
               <div>
                 <a href="https://www.github.com/jackconnor" target="_blank"><div class="button col-sm-4 col-xs-12"><p>My Github</p></div></a>
-                <div class="button col-sm-4 col-xs-12"><p>Contact</p></div>
-                <div class="button col-sm-4 col-xs-12"><p>About Jack</p></div>
+                <div id="contact" class="button col-sm-4 col-xs-12"><p>Contact</p></div>
+                <div id="about" class="button col-sm-4 col-xs-12"><p>About Jack</p></div>
               </div>
             </div>
           </div>
@@ -242,11 +235,18 @@
   {{/if}}
 </template>
 
+<template name="contact">
+  <h1>contact Jack now!</h1>
+</template>
+
 <template name="bodyHolder">
   <div class="bodyContainer">
     {{> navbar}}
     {{#if numero}}
       {{> projects}}
+    {{/if}}
+    {{#if contactSwitch}}
+      {{>contact}}
     {{/if}}
     {{> aboutMe}}
     {{#if toggle}}
