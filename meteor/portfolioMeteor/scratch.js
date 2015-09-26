@@ -1,4 +1,4 @@
-// // 
+// //
 // //
 // // db.projects.insert({
 // //   name: "reBound",
@@ -71,7 +71,7 @@
 //
 //     problem: "Build a mobile solution that will allow users to find one-another in real time via a dynamic arrow, like a compass, which would point towards the others device.",
 //
-//     solution: "With an Express Base backend adn Facebook authentication using Passport, we used web-socket technology provided by Socket.io and plain Javascript for this app. Grabbing the users device-orientation data from their phone (latitude and longitude in this version), we could trnasmit this data in realtime to a partner, which would be rendered into a 3D, dynamically pointing arrow on each users screen, which they could follow to find the other.",
+//     solution: "With an Express Base backend and Facebook authentication using Passport, we used web-socket technology provided by Socket.io and plain Javascript for this app. Grabbing the users device-orientation data from their phone (latitude and longitude in this version), we could transmit this data in realtime to a partner, which would be rendered into a 3D, dynamically pointing arrow on each users screen, which they could follow to find the other.",
 //
 //     technology_used: "javascript node web-socket"
 //   },
