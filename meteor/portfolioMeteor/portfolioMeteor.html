@@ -1,15 +1,9 @@
 <head>
-  <title>portfolioMeteor</title>
+  <title>Jack Connor Portfolio</title>
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-  <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-<![endif]-->
-<!--[if gt IE 8]><!-->
     <link rel="stylesheet " href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
 <!--<![endif]-->
-
 </head>
-
 <body>
   <div class="appContainer">
 
@@ -18,7 +12,6 @@
   </div>
   <script src="scripts.js" charset="utf-8"></script>
 </body>
-
 <!--end body and start templates-->
 
 <template name="intro">
@@ -45,8 +38,8 @@
             <div class="row">
               <div>
                 <a href="https://www.github.com/jackconnor" target="_blank"><div class="button col-sm-4 col-xs-12"><p>My Github</p></div></a>
-                <div class="button col-sm-4 col-xs-12"><p>Contact</p></div>
-                <div class="button col-sm-4 col-xs-12"><p>About Jack</p></div>
+                <div id="contact" class="button col-sm-4 col-xs-12"><p>Contact</p></div>
+                <div id="about" class="button col-sm-4 col-xs-12"><p>About Jack</p></div>
               </div>
             </div>
           </div>
@@ -242,16 +235,59 @@
   {{/if}}
 </template>
 
+<template name="contact">
+  <div class="contactContainer">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12" id="contactEmail">
+        <h1>Write Jack an Email</h1>
+        <h3>jack.connor83@gmail.com</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12" id="contactPhone">
+        <h1>Call or Text Jack</h1>
+        <h3>(eight-four-seven)-682-8273</h3>
+      </div>
+    </div>
+    <div class="row">
+      <a href="https://www.linkedin.com/in/jackconnor" target="_blank">
+        <div class="col-sm-8 col-sm-offset-2 col-xs-12" id="contactLinkedin">
+          <h1>Find me on Linkedin</h1>
+          <h3>www.linkedin.com/in/jackconnor</h3>
+          <p>
+            (click to open in new tab)
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="row">
+      <a href="https://angel.co/jack-connor" target="_blank">
+        <div class="col-sm-8 col-sm-offset-2 col-xs-12" id="contactAngel">
+          <h1>Angellist Profile</h1>
+          <h3>https://angel.co/jack-connor</h3>
+          <p>
+            (click to open in new tab)
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</template>
+
 <template name="bodyHolder">
   <div class="bodyContainer">
     {{> navbar}}
     {{#if numero}}
       {{> projects}}
     {{/if}}
-    {{> aboutMe}}
+    {{#if contactSwitch}}
+      {{>contact}}
+    {{/if}}
+    <!-- {{> aboutMe}}
     {{#if toggle}}
       {{> catProject}}
-    {{/if}}
+    {{/if}} -->
   </div>
 </template>
 

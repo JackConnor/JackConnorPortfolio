@@ -17,6 +17,7 @@ if (Meteor.isClient) {
   Session.setDefault('currentProject', null);
   Session.setDefault('currentCategory', null);
   Session.setDefault('photoCounter', 0);
+  Session.setDefault('contactSwitch', false);
 
   Template.navbar.helpers({
 
@@ -24,7 +25,9 @@ if (Meteor.isClient) {
 
   Template.navbar.events({
     'click .siteTitle': function(){
-      Session.set('singleCounter', false)
+      Session.set('singleCounter', false);
+      Session.set('numero', true);
+      Session.set('contactSwitch', false);
     },
     'mouseenter .siteTitle': function(){
       $('#titleName').animate({
@@ -35,6 +38,11 @@ if (Meteor.isClient) {
       $('#titleName').animate({
         fontSize: "56px"
       })
+    },
+    'click #contact': function(){
+      Session.set('singleCounter', false);
+      Session.set('numero', false);
+      Session.set('contactSwitch', true);
     }
   })
 
@@ -250,35 +258,35 @@ if (Meteor.isClient) {
     },
 
     'mouseenter .currentPhoto': function(){
-      $('#backPhotos').css('opacity', 0.3);
-      $('#morePhotos').css('opacity', 0.3);
-      $('.thumbHolder').css('background-color', '#FEB1D2')
+      $('#backPhotos').css('opacity', 0.4);
+      $('#morePhotos').css('opacity', 0.4);
+      $('.thumbHolder').css('background-color', '#77ECF3')
     },
     'mouseleave .currentPhoto': function(){
       $('#backPhotos').css('opacity', 0.1);
       $('#morePhotos').css('opacity', 0.1);
-      $('.thumbHolder').css('background-color', '#FCCECE')
+      $('.thumbHolder').css('background-color', '#92E2E7')
 
     },
     "mouseenter #backPhotos": function(){
       $('#backPhotos').css('opacity', 0.7);
       $('#morePhotos').css('opacity', 0.3);
-      $('.thumbHolder').css('background-color', '#FEB1D2')
+      $('.thumbHolder').css('background-color', '#77ECF3')
     },
     "mouseleave #backPhotos": function(){
       $('#backPhotos').css('opacity', 0.1);
       $('#morePhotos').css('opacity', 0.1);
-      $('.thumbHolder').css('background-color', '#FCCECE')
+      $('.thumbHolder').css('background-color', '#92E2E7')
     },
     "mouseenter #morePhotos": function(){
       $('#morePhotos').css('opacity', 0.7);
       $('#backPhotos').css('opacity', 0.3);
-      $('.thumbHolder').css('background-color', '#FEB1D2')
+      $('.thumbHolder').css('background-color', '#77ECF3')
     },
     "mouseleave #morePhotos": function(){
       $('#morePhotos').css('opacity', 0.1);
       $('#backPhotos').css('opacity', 0.1);
-      $('.thumbHolder').css('background-color', '#FCCECE')
+      $('.thumbHolder').css('background-color', '#92E2E7')
     },
     'mouseenter #titleTitle':function(){
       $('#titleTitle').animate({'fontSize': '62px'})
@@ -342,6 +350,14 @@ if (Meteor.isClient) {
     }
   })
 
+  Template.contact.events({
+
+  })
+
+  Template.contact.helpers({
+
+  })
+
   Template.intro.events({
     'click .introContainer': function(){
       Session.set('introCounter', !Session.get('introCounter'));
@@ -367,6 +383,9 @@ if (Meteor.isClient) {
     },
     toggle: function(){
       return Session.get('aboutMeCounter');
+    },
+    contactSwitch: function(){
+      return Session.get('contactSwitch');
     }
   });
 

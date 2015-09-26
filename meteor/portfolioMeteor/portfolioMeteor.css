@@ -5,6 +5,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: 'futura';
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -130,6 +134,11 @@ li {
   border-radius: 10%;
 }
 
+.contactContainer {
+  height: 400px;
+  height: 100%;
+}
+
 .currentPhoto{
   outline: 10px solid gray;
   width: 80%;
@@ -150,7 +159,7 @@ li {
 }
 
 .github {
-  background-color: #A0FDEF;
+  background-color: #E7EDF0;
   height: 110px;
   width: 90%;
   margin: 0 auto;
@@ -174,7 +183,7 @@ li {
 }
 
 .github:hover {
-  background-color: #77ECF3;
+  background-color: #EBD3EB;
   text-decoration: none;
 }
 
@@ -218,6 +227,11 @@ li {
   color: white;
 }
 
+.infoProject p{
+  width: 90%;
+  margin-left: 5%;
+}
+
 .introBox {
   background-color: white;
   color: gray;
@@ -249,7 +263,7 @@ li {
 }
 
 .live {
-  background-color: #A0FDEF;
+  background-color: #E7EDF0;
   height: 110px;
   width: 90%;
   margin: 0 auto;
@@ -274,7 +288,7 @@ li {
 }
 
 .live:hover {
-  background-color: #77ECF3;
+  background-color: #EBD3EB;
 }
 
 .members {
@@ -296,7 +310,7 @@ li {
 .navcontainer {
   min-height: 200px;
   height: 100%;
-  background-color: #98DFE3;
+  background-color: #92E2E7;
   margin-top: -5px;
 }
 
@@ -389,10 +403,13 @@ li {
   margin: -10px 0 0 0;
   font-weight: bold;
   font-size: 17px;
+  font-family: 'futura';
 }
 
 .siteTitle h1 {
   font-size: 56px;
+  margin-top: 22px;
+  font-family: "futura"
 }
 
 .tech{
@@ -404,6 +421,7 @@ li {
 
 .techList {
   margin: 6px 0 0 0;
+  padding-bottom: 15px;
 }
 
 .techStack {
@@ -446,7 +464,7 @@ li {
   padding-top: 5px;
   height: 130px;
   width: 1620px;
-  background-color: #FCCECE;
+  background-color: #92E2E7;
 }
 
 .thumbPhoto {
@@ -495,10 +513,10 @@ li {
 }
 
 #challenge {
-  background-color: aqua;
+  background-color: #92E2E7;
   height: 230px;
   padding: 2px 0 0 10px;
-  margin: 20px 0 0 0;
+  margin: 40px 0 0 0;
 }
 
 #challenge h1 {
@@ -513,6 +531,51 @@ li {
 #clickCategory {
   display: block;
   margin-top: -20px;
+}
+
+#contactAngel {
+  text-align: center;
+  height: 100%;
+  background-color: #92E2E7;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+#contactAngel {
+  text-decoration-style: none;
+}
+
+#contactAngel:hover {
+  text-decoration-style: none;
+}
+
+#contactAngel:visited {
+  text-decoration-style: none;
+}
+
+#contactEmail {
+  text-align: center;
+  height: 100%;
+  background-color: #E7EDF0;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+#contactLinkedin {
+  text-align: center;
+  height: 100%;
+  background-color: #E7EDF0;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+#contactPhone {
+  text-align: center;
+  height: 100%;
+  background-color: #92E2E7;
+  margin-top: 20px;
+  padding-bottom: 20px;
+
 }
 
 #morePhotos {
