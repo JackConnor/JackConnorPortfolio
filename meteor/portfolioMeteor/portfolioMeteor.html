@@ -33,13 +33,18 @@
         <p id='titleDescription'>Full-Stack Javascript Developer | Astrophyics Lover | Skateboard Afficionado</p>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-sm-offset-6 col-xs-12">
+        <div class="col-sm-6 col-sm-offset-8 col-xs-12">
           <div class="navButtons">
             <div class="row">
               <div>
-                <a href="https://www.github.com/jackconnor" target="_blank"><div class="button col-sm-4 col-xs-12"><p>My Github</p></div></a>
-                <div id="contact" class="button col-sm-4 col-xs-12"><p>Contact</p></div>
-                <div id="about" class="button col-sm-4 col-xs-12"><p>About Jack</p></div>
+                <a href="https://www.github.com/jackconnor" target="_blank">
+                  <div class="button col-sm-4 col-xs-6">
+                    <p>My Github</p>
+                  </div>
+                </a>
+                <div id="contact" class="button col-sm-4 col-xs-6">
+                  <p>Contact</p>
+                </div>
               </div>
             </div>
           </div>
@@ -272,7 +277,22 @@
       </a>
     </div>
   </div>
+</template>
 
+<template name="footer">
+  <div class="footerContainer">
+    <div class="row footerLinks">
+      <div class="col-sm-4 col-xs-12">
+        <h4>&middot;jack.connor83@gmail.com&middot;</h4>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        <h4>&middot;(eight-four-seven)-682-8273&middot;</h4>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        <h4>&middot;www.linkedin.com/in/jackconnor&middot;</h4>
+      </div>
+    </div>
+  </div>
 </template>
 
 <template name="bodyHolder">
@@ -284,6 +304,7 @@
     {{#if contactSwitch}}
       {{>contact}}
     {{/if}}
+    {{>footer}}
     <!-- {{> aboutMe}}
     {{#if toggle}}
       {{> catProject}}

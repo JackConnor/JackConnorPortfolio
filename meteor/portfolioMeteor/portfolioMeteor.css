@@ -158,6 +158,21 @@ li {
   color: #575D5D;
 }
 
+.footerContainer{
+  height: 100%;
+  background-color: #92E2E7;
+  position: static;
+}
+
+.footerLinks{
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.footerLinks h4{
+  margin-top: 15px;
+}
+
 .github {
   background-color: #E7EDF0;
   height: 110px;
@@ -299,7 +314,7 @@ li {
 
 .navButtons {
   display: block;
-  margin-top: 42px;
+  margin-top: 17px;
   margin-right: 5%;
 }
 
@@ -539,6 +554,7 @@ li {
   background-color: #92E2E7;
   margin-top: 20px;
   padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #contactAngel {
