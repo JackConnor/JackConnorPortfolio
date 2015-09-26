@@ -153,12 +153,13 @@ if (Meteor.isClient) {
       var target = $(evt.target);
       target.animate({
         "opacity": .6
-      }, 300);
+      }, 100);
       var textBlurb = $(target.parent().children()[1]);
       textBlurb.animate({
-        width: "290px",
-        fontSize: "18px"
-      })
+        opacity: .7
+        // width: "290px",
+        // fontSize: "18px"
+      }, 200)
     },
     'mouseleave .projectPhoto': function(evt){
       var target = $(evt.target);
@@ -166,10 +167,24 @@ if (Meteor.isClient) {
         opacity: 1
       }, 100);
       var textBlurb = $(target.parent().children()[1]);
-      textBlurb.animate({
-        width: "0px",
-        fontSize: "0px"
-      })
+      textBlurb.css({
+        opacity: 0
+      });
+      // textBlurb.css(
+      //   "fontSize", "0px"
+      // )
+    },
+    'mouseenter .popout': function(evt){
+      var textBlurb = $(evt.target);
+      textBlurb.css({
+        opacity: .7
+      });
+    },
+    'mouseleave .popout': function(evt){
+      var textBlurb = $(evt.target);
+      textBlurb.css({
+        opacity: 0
+      });
     }
   })
 
