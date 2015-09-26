@@ -8,7 +8,6 @@ if (Meteor.isServer){
 
 if (Meteor.isClient) {
 
-  // counter starts at 0
   Session.setDefault('introCounter', true);
   Session.setDefault('numero', true);
   Session.setDefault('singleCounter', false);
@@ -48,16 +47,9 @@ if (Meteor.isClient) {
       if(evt.target.id){
         Session.set('currentCategory', evt.target.id)
         console.log(evt.target);
-        // $('.category').css('opacity', .2);
-        // document.querySelector(".techTitle").style.opacity = 1;
       } else {
         console.log(evt.target.parentNode.parentNode.id);
-        // $('.category').each(function(){
-        //   $(this).css('opacity', .2);
-        // }
         Session.set('currentCategory', evt.target.parentNode.parentNode.id);
-
-        // document.querySelector(".techTitle").style.opacity = 1;
       }
       console.log(Session.get('currentCategory'));
       Session.set('aboutMeCounter', !Session.get('aboutMeCounter'));
@@ -118,7 +110,6 @@ if (Meteor.isClient) {
     'click .projects': function(evt){
       console.log('working?');
       console.log(evt);
-      // Session.set('singleCounter', !Session.get('singleCounter'));
       if(evt.target.id[0] == "O") {
         var id = evt.target.id;
         var dataCall = Projects.findOne(id);
@@ -191,11 +182,6 @@ if (Meteor.isClient) {
       projects.forEach(function(data, photos){
         combo.push({data: data, photo: data.media[0].url})
       })
-
-
-      // for (var j = 0; j < ps.length; j++) {
-      //   combo.push({data: ps[j], photo: photos[j]})
-      // }
       return combo;
     },
     singleProjectDetails: function(){
@@ -361,7 +347,6 @@ if (Meteor.isClient) {
       Session.set('introCounter', !Session.get('introCounter'));
     },
     'mouseover .introContainer': function(){
-      // var x = $('.clickToEnter');
       var x = $('.title');
        x.animate({opacity: .8}, 1000);
       setTimeout(function(){
