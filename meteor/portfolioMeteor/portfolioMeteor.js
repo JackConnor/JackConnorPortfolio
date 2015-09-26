@@ -250,35 +250,35 @@ if (Meteor.isClient) {
     },
 
     'mouseenter .currentPhoto': function(){
-      $('#backPhotos').css('opacity', 0.3);
-      $('#morePhotos').css('opacity', 0.3);
-      $('.thumbHolder').css('background-color', '#FEB1D2')
+      $('#backPhotos').css('opacity', 0.4);
+      $('#morePhotos').css('opacity', 0.4);
+      $('.thumbHolder').css('background-color', '#77ECF3')
     },
     'mouseleave .currentPhoto': function(){
       $('#backPhotos').css('opacity', 0.1);
       $('#morePhotos').css('opacity', 0.1);
-      $('.thumbHolder').css('background-color', '#FCCECE')
+      $('.thumbHolder').css('background-color', '#92E2E7')
 
     },
     "mouseenter #backPhotos": function(){
       $('#backPhotos').css('opacity', 0.7);
       $('#morePhotos').css('opacity', 0.3);
-      $('.thumbHolder').css('background-color', '#FEB1D2')
+      $('.thumbHolder').css('background-color', '#77ECF3')
     },
     "mouseleave #backPhotos": function(){
       $('#backPhotos').css('opacity', 0.1);
       $('#morePhotos').css('opacity', 0.1);
-      $('.thumbHolder').css('background-color', '#FCCECE')
+      $('.thumbHolder').css('background-color', '#92E2E7')
     },
     "mouseenter #morePhotos": function(){
       $('#morePhotos').css('opacity', 0.7);
       $('#backPhotos').css('opacity', 0.3);
-      $('.thumbHolder').css('background-color', '#FEB1D2')
+      $('.thumbHolder').css('background-color', '#77ECF3')
     },
     "mouseleave #morePhotos": function(){
       $('#morePhotos').css('opacity', 0.1);
       $('#backPhotos').css('opacity', 0.1);
-      $('.thumbHolder').css('background-color', '#FCCECE')
+      $('.thumbHolder').css('background-color', '#92E2E7')
     },
     'mouseenter #titleTitle':function(){
       $('#titleTitle').animate({'fontSize': '62px'})
