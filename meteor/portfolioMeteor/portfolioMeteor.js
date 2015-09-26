@@ -1,10 +1,8 @@
 
-
-Projects = new Mongo.Collection('projects');
-
 if (Meteor.isServer){
-  process.env.MONGO_URL=' mongodb://jackconnor:Skateboard1@ds051913.mongolab.com:51913/jackconnorportfoliodb'
+  process.env.MONGO_URL=' mongodb://jackconnor:Skateboard1@apollo.modulusmongo.net:27017/yj7uhyNy'
 }
+Projects = new Mongo.Collection('projects');
 
 if (Meteor.isClient) {
 
@@ -404,10 +402,4 @@ if (Meteor.isClient) {
     }
   });
 
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
 }
