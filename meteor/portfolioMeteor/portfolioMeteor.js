@@ -27,6 +27,7 @@ if (Meteor.isClient) {
     'click .siteTitle': function(){
       Session.set('singleCounter', false);
       Session.set('numero', true);
+      Session.set('contactSwitch', false);
     },
     'mouseenter .siteTitle': function(){
       $('#titleName').animate({
@@ -347,6 +348,14 @@ if (Meteor.isClient) {
       var parsed = techString.split(" ")
       return ({first: parsed[0], second: parsed[1], third: parsed[2]});
     }
+  })
+
+  Template.contact.events({
+
+  })
+
+  Template.contact.helpers({
+
   })
 
   Template.intro.events({
