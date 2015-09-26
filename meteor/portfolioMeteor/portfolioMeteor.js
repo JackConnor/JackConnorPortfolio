@@ -1,3 +1,5 @@
+
+
 Projects = new Mongo.Collection('projects');
 
 if (Meteor.isServer){
