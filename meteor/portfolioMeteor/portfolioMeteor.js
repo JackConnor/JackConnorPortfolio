@@ -1,10 +1,29 @@
 
 
-Projects = new Mongo.Collection('projects');
 
-if (Meteor.isServer){
-  process.env.MONGO_URL=' mongodb://jackconnor:Skateboard1@ds051913.mongolab.com:51913/jackconnorportfoliodb'
-}
+// if (Meteor.isServer){
+//   // process.env.MONGO_URL=' mongodb://jackconnor:Skateboard1@apollo.modulusmongo.net:27017/yj7uhyNy'
+//   console.log('server side? more like best side!')
+//   process.env.MONGO_URL = "mongodb://jackconnor:Skateboard1@apollo.modulusmongo.net:27017/yj7uhyNy"
+//   console.log(process.env.MONGO_URL);
+// }
+
+Projects = new Mongo.Collection('projects'); 
+
+
+// MongoClient.connect("mongodb://jackconnor:Skateboard1@apollo.modulusmongo.net:27017/yj7uhyNy", {native_parser:true}, function(err, db) {
+//   assert.equal(null, err);
+//   console.log(db);
+//
+//   db.collection('mongoclient_test').update({a:1}, {b:1}, {upsert:true}, function(err, result) {
+//     console.log(result);
+//     assert.equal(null, err);
+//     assert.equal(1, result);
+//
+//     db.close();
+//   });
+// });
+
 
 if (Meteor.isClient) {
 
@@ -153,12 +172,13 @@ if (Meteor.isClient) {
       var target = $(evt.target);
       target.animate({
         "opacity": .6
-      }, 300);
+      }, 100);
       var textBlurb = $(target.parent().children()[1]);
       textBlurb.animate({
-        width: "290px",
-        fontSize: "18px"
-      })
+        opacity: .7
+        // width: "290px",
+        // fontSize: "18px"
+      }, 200)
     },
     'mouseleave .projectPhoto': function(evt){
       var target = $(evt.target);
@@ -166,10 +186,24 @@ if (Meteor.isClient) {
         opacity: 1
       }, 100);
       var textBlurb = $(target.parent().children()[1]);
-      textBlurb.animate({
-        width: "0px",
-        fontSize: "0px"
-      })
+      textBlurb.css({
+        opacity: 0
+      });
+      // textBlurb.css(
+      //   "fontSize", "0px"
+      // )
+    },
+    'mouseenter .popout': function(evt){
+      var textBlurb = $(evt.target);
+      textBlurb.css({
+        opacity: .7
+      });
+    },
+    'mouseleave .popout': function(evt){
+      var textBlurb = $(evt.target);
+      textBlurb.css({
+        opacity: 0
+      });
     }
   })
 
@@ -389,10 +423,4 @@ if (Meteor.isClient) {
     }
   });
 
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
 }
