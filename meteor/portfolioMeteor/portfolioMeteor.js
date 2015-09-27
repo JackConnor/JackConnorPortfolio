@@ -1,8 +1,29 @@
 
-if (Meteor.isServer){
-  process.env.MONGO_URL=' mongodb://jackconnor:Skateboard1@apollo.modulusmongo.net:27017/yj7uhyNy'
-}
-Projects = new Mongo.Collection('projects');
+
+
+// if (Meteor.isServer){
+//   // process.env.MONGO_URL=' mongodb://jackconnor:Skateboard1@apollo.modulusmongo.net:27017/yj7uhyNy'
+//   console.log('server side? more like best side!')
+//   process.env.MONGO_URL = "mongodb://jackconnor:Skateboard1@apollo.modulusmongo.net:27017/yj7uhyNy"
+//   console.log(process.env.MONGO_URL);
+// }
+
+Projects = new Mongo.Collection('projects'); 
+
+
+// MongoClient.connect("mongodb://jackconnor:Skateboard1@apollo.modulusmongo.net:27017/yj7uhyNy", {native_parser:true}, function(err, db) {
+//   assert.equal(null, err);
+//   console.log(db);
+//
+//   db.collection('mongoclient_test').update({a:1}, {b:1}, {upsert:true}, function(err, result) {
+//     console.log(result);
+//     assert.equal(null, err);
+//     assert.equal(1, result);
+//
+//     db.close();
+//   });
+// });
+
 
 if (Meteor.isClient) {
 
