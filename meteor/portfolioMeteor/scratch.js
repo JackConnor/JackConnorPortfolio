@@ -1,32 +1,32 @@
-// //
-// //
-// // db.projects.insert({
-// //   name: "reBound",
-// //   completion_date: "06-15-2015",
-// //   role: "FullStack Javascript developer",
-// //   content: {
-// //
-// //     short: "Improve your memory and mental cognition by gauging the flight path of a ball across a table",
-// //
-// //     long: "This game, to be played in the pantheon of Lumosity and Fit-Brains mental training games, provides real memory enhancement through a fun (but difficult) two-player game. Memorize the path of a flying ball across a board as it careens off a series of bumpers, or set up a tough board to stump your friends. This game was built using pure javascript/jquery, comprising nearly two thousand lines of code. I personally found this to be a satisfying challenge, as I’ve enjoyed other iterations of reBound and embraced the requirement of creating a two-player game to create something fun and unique.",
-// //
-// //     problem: "To build a two-player game using javascript and jquery. Long a fan of cognition training games, I decided to narrow this challenge to rebuild an old favorite",
-// //
-// //     solution: "I designed and developed a this game using a minimum of technologies (just jQuery), and I knew that the biggest challenge would be to pre-track the path of the ball as it bounces off of the bumpers, as these are set by the player rather than by the board. The solution was to create a thorough model for our board that would be scanned through and read to create the flight path for the ball. This model is fed into a repeating function to analyze each leg of the balls journey, and ultimately it’s exit path from the board (which may or may not have been guessed by the opposing player). ",
-// //
-// //     technology_used: "javascript jquery html/css"
-// //   },
-// //   links: {
-// //     github: "https://github.com/JackConnor/reBound",
-// //     live: "http://rebound.bitballoon.com/"
-// //   },
-// //   media: [
-// //     {"url":"http://s9.postimg.org/wty1cpbtr/Screen_Shot_2015_09_26_at_12_13_12_AM.png"},
-// //     {"url": "http://s1.postimg.org/ov0rv1wv3/Screen_Shot_2015_09_26_at_12_15_27_AM.png"},
-// //     {"url": "http://s9.postimg.org/i0jdry42n/Screen_Shot_2015_09_26_at_12_14_19_AM.png"},
-// //     {"url": "http://s16.postimg.org/svhq9mvr9/Screen_Shot_2015_09_26_at_12_16_23_AM.png"},     {"url": "http://s23.postimg.org/5kmajxz4r/Screen_Shot_2015_09_26_at_12_16_28_AM.png"}
-// //   ]
-// // })
+//
+//
+// db.projects.insert({
+//   name: "reBound",
+//   completion_date: "06-15-2015",
+//   role: "FullStack Javascript developer",
+//   content: {
+//
+//     short: "Improve your memory and mental cognition by gauging the flight path of a ball across a table",
+//
+//     long: "This game, to be played in the pantheon of Lumosity and Fit-Brains mental training games, provides real memory enhancement through a fun (but difficult) two-player game. Memorize the path of a flying ball across a board as it careens off a series of bumpers, or set up a tough board to stump your friends. This game was built using pure javascript/jquery, comprising nearly two thousand lines of code. I personally found this to be a satisfying challenge, as I’ve enjoyed other iterations of reBound and embraced the requirement of creating a two-player game to create something fun and unique.",
+//
+//     problem: "To build a two-player game using javascript and jquery. Long a fan of cognition training games, I decided to narrow this challenge to rebuild an old favorite",
+//
+//     solution: "I designed and developed a this game using a minimum of technologies (just jQuery), and I knew that the biggest challenge would be to pre-track the path of the ball as it bounces off of the bumpers, as these are set by the player rather than by the board. The solution was to create a thorough model for our board that would be scanned through and read to create the flight path for the ball. This model is fed into a repeating function to analyze each leg of the balls journey, and ultimately it’s exit path from the board (which may or may not have been guessed by the opposing player). ",
+//
+//     technology_used: "javascript jquery html/css"
+//   },
+//   links: {
+//     github: "https://github.com/JackConnor/reBound",
+//     live: "http://rebound.bitballoon.com/"
+//   },
+//   media: [
+//     {"url":"http://s9.postimg.org/wty1cpbtr/Screen_Shot_2015_09_26_at_12_13_12_AM.png"},
+//     {"url": "http://s1.postimg.org/ov0rv1wv3/Screen_Shot_2015_09_26_at_12_15_27_AM.png"},
+//     {"url": "http://s9.postimg.org/i0jdry42n/Screen_Shot_2015_09_26_at_12_14_19_AM.png"},
+//     {"url": "http://s16.postimg.org/svhq9mvr9/Screen_Shot_2015_09_26_at_12_16_23_AM.png"},     {"url": "http://s23.postimg.org/5kmajxz4r/Screen_Shot_2015_09_26_at_12_16_28_AM.png"}
+//   ]
+// })
 // /////end reBound
 // ///
 // /////////begin Now-Playing
