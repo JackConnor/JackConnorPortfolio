@@ -146,7 +146,7 @@ li {
 }
 
 .descriptionsContainer {
-    /*height: 300px;*/
+    margin-bottom: 10px;
     padding-bottom: 25px;
     min-height: 100%;
     background-color: #92E2E7;
@@ -424,7 +424,8 @@ li {
 .siteTitle h1 {
   font-size: 56px;
   margin-top: 22px;
-  font-family: "futura"
+  font-family: "futura";
+  padding-bottom: 5px;
 }
 
 .tech{
@@ -641,4 +642,12 @@ li {
   font-weight: bolder;
   font-size: 20px;
   padding-bottom: 20px;
+}
+
+#titleHolder {
+
+}
+
+
+#titleDescription{
 }
