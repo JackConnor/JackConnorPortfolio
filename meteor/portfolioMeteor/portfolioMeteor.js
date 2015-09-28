@@ -147,7 +147,7 @@ if (Meteor.isClient) {
         console.log(Session.get('currentPhoto'));
 
 
-      }else{
+      }else{ 
         var name = $(evt.target);
         var dataCall = Projects.findOne({"name": name.context.innerText});
         var currProj = {allData: dataCall, media: dataCall.media};
