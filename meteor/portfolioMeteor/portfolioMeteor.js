@@ -463,6 +463,29 @@ Projects = [
   },
   ///third data point
   {
+    name: "The Quantum Institue",
+    completion_date: "09-29-2015",
+    role: "FullStack Javascript Developer",
+    content: {
+      short: "A science comedy podcast’s homepage and customized podcast player",
+      long: "The Quantum Institute is a podcast dedicated to talking about science like normal people. We argue the ins and outs of expansionary inflation theory, laugh about phony science in sci-fi movies, and generally have a great time discussing the things that interest us the most.",
+      problem: "To build a Single Page Application that would easily function both as a player, and as a home page and contact for The Quantum Institute. As QI currently uses youtube for hosting, it was necessary to have live-play in screen.",
+      solution: "I used Meteor.js, jQuery, and  a bit of Bootstrap for responsiveness to create the streamlined site you’ll find when clicking through. The #1 UX goal of this project was for new listeners to have a place to easily listen to archived episodes in-browser, so I built an in-page youtube player for each individual episode, which folds out only when clicked. Extensive jquery and javascript frontend coding was used to “guide” the user towards each episodes player with visual and movement-oriented visual clues to indicate functionality, so that anyone could open and use the site problem-free, first try. Finally, I integrated the youtube iFrame player api, so that users could listen in screen with one click, without needing to click through to another site.",
+      technology_used: "meteor.js, javascript, jquery"
+    },
+    links: {
+      github: "https://github.com/JackConnor/theQuantumInstitute",
+      live: "http://quantuminstitute.meteor.com/"
+    },
+    media: [
+      {"url": "http://s4.postimg.org/qax7end9p/Screen_Shot_2015_09_29_at_12_29_28_PM.png"},
+      {"url": "http://s28.postimg.org/wv2bl5sgt/Screen_Shot_2015_09_29_at_12_31_15_PM.png"},
+      {"url": "http://s23.postimg.org/qo3byf4wb/Screen_Shot_2015_09_29_at_12_30_06_PM.png"},
+      {"url": "http://s30.postimg.org/3rnsnnke9/Screen_Shot_2015_09_29_at_12_42_36_PM.png"},     {"url": "http://s22.postimg.org/joblaftzl/Screen_Shot_2015_09_29_at_12_30_27_PM.png"}
+    ]
+  },
+  ///fourth data point
+  {
     name: "Link Up",
     completion_date: "08-18-2015",
     role: "FullStack Javascript Developer",

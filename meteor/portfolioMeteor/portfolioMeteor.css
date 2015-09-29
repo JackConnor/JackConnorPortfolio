@@ -265,6 +265,10 @@ li {
   margin-top: 0px
 }
 
+.introContainer {
+  height: 100%
+}
+
 .links {
   height: 350px;
   background-color: pink;
@@ -425,7 +429,7 @@ li {
   font-size: 56px;
   margin-top: 22px;
   font-family: "futura";
-  padding-bottom: 5px; 
+  padding-bottom: 5px;
 }
 
 .tech{
