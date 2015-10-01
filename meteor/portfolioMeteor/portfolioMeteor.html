@@ -329,8 +329,21 @@
   </div>
 </template>
 
+<template name="aboutJack">
+  <div class="aboutJackContainer">
+    <div class="row">
+      <div class="jackPhotoSection col-md-6 col-md-offset-0 col-xs-8 col-xs-offset-2">
+        <div class="jackPhotoContainer">
+          <img src="http://s23.postimg.org/vyhrk8lgb/jack_Cover.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <template name="footer">
   <div class="footerContainer">
+    <div id='test'></div>
     <div class="row footerLinks">
       <div class="col-sm-4 col-xs-12">
         <h4>&middot;jack.connor83@gmail.com&middot;</h4>
@@ -350,6 +363,7 @@
     {{> navbar}}
     {{#if numero}}
       {{> projects}}
+      {{>aboutJack}}
     {{/if}}
     {{#if contactSwitch}}
       {{>contact}}

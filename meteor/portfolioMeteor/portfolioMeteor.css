@@ -33,6 +33,10 @@ li {
   text-align: center;
 }
 
+.aboutJackContainer {
+  outline: 2px solid aqua;
+}
+
 .appContainer {
   width: 100%;
   background-color: #CADCDE;
@@ -267,6 +271,20 @@ li {
 
 .introContainer {
   height: 100%
+}
+
+.jackPhotoSection {
+  outline: 2px solid green;
+}
+
+.jackPhotoContainer {
+  outline: 2px solid yellow;
+  width: 75%;
+  margin: 20px auto 0 auto;
+}
+
+.jackPhotoContainer img{
+  width: 100%;
 }
 
 .links {
