@@ -279,6 +279,7 @@ li {
   height: 300px;
   text-align: center;
   padding-top: 10px;
+  margin-top: 40px;
 }
 
 .live {
@@ -605,7 +606,7 @@ li {
   height: 30%;
   font-size: 24px;
   text-align: center;
-  opacity: 0;
+  opacity: .1;
 }
 #moreSolution{
   color: white;
@@ -613,7 +614,8 @@ li {
   height: 30%;
   font-size: 24px;
   text-align: center;
-  opacity: 0;
+  opacity: .1;
+  width: 100%;
 }
 
 #morePhotos {
@@ -650,8 +652,7 @@ li {
 #solution {
   min-height: 100%;
   margin: 25px 0 0 0;
-  padding: 2px 0 0 10px;
-
+  padding: 2px 0 0 0px;
   background-color: #E7EDF0;
 }
 

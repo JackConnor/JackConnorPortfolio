@@ -353,30 +353,35 @@ if (Meteor.isClient) {
       $('#moreChallenge').css('opacity', 0.35);
     },
     'mouseleave #challenge': function(){
-      $('#moreChallenge').css('opacity', 0);
+      $('#moreChallenge').css('opacity', .1);
     },
     'mouseenter #solution': function(){
       $('#moreSolution').css('opacity', 0.35);
     },
     'mouseleave #solution': function(){
-      $('#moreSolution').css('opacity', 0);
+      $('#moreSolution').css('opacity', .1);
     },
-    'click #moreChallenge': function(){
+    'click #challenge': function(){
       if(!Session.get('challengeToggle')){
+        $('#moreChallenge')[0].innerText = "Click to Close"
         $('#challengeContent')[0].innerText = Session.get('currentProject').allData.content.problem;
         Session.set('challengeToggle', !Session.get('challengeToggle'))
       } else {
+        $('#moreChallenge')[0].innerText = "Click for More Info"
         $('#challengeContent')[0].innerText = Session.get('currentProject').allData.content.problem.split(' ').slice(0, 8).join(' ')+'...';
         Session.set('challengeToggle', !Session.get('challengeToggle'))
       }
     },
-    'click #moreSolution': function(){
+    'click #solution': function(){
       if(!Session.get('solutionToggle')){
+        $('#moreSolution')[0].innerText = "Click to Close";
         var el = $('#solutionContent');
         console.log(el);
-        $('#solutionContent')[0].innerText = Session.get('currentProject').allData.content.solution;
+        console.log(el[0].innerText);
+        el[0].innerText = Session.get('currentProject').allData.content.solution;
         Session.set('solutionToggle', !Session.get('solutionToggle'))
       } else {
+        $('#moreSolution')[0].innerText = "Click for More Info";
         $('#solutionContent')[0].innerText = Session.get('currentProject').allData.content.solution.split(' ').slice(0, 8).join(' ')+"...";
         Session.set('solutionToggle', !Session.get('solutionToggle'))
       }
