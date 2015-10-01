@@ -32,7 +32,7 @@
         <div id='titleHolder'>
           <h1 id="titleName">Jack Connor</h1>
         </div>
-        <p id='titleDescription'>Full-Stack Javascript Developer | Astrophyics Lover | Skateboard Afficionado</p>
+        <p id='titleDescription'>Full-Stack Javascript | Node.js | Fulltime & Freelance</p>
       </div>
       <div class="row">
         <div class="col-sm-5 col-sm-offset-7 col-xs-12">
@@ -157,10 +157,16 @@
           <h1 id='titleTitle'>{{data.allData.name}}</h1>
         </div>
         <div id="challenge">
-          <h2 id="challengeTitle">The Challenge:</h2><p>{{data.allData.content.problem}}</p>
+          <h2 id="challengeTitle">The Challenge:</h2><p id='challengeContent'>{{shortChallenge}}</p>
+          <div id="moreChallenge">
+            Click for More Info
+          </div>
         </div>
         <div id="solution">
-          <h2 id="solutionTitle">The Solution:</h2><p>{{data.allData.content.solution}}</p>
+          <h2 id="solutionTitle">The Solution:</h2><p>{{shortSolution}}</p>
+          <div id="moreSolution">
+            Click for More Info
+          </div>
         </div>
       </div>
     </div>
