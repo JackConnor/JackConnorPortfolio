@@ -20,6 +20,8 @@ if (Meteor.isClient) {
   Session.setDefault('currentCategory', null);
   Session.setDefault('photoCounter', 0);
   Session.setDefault('contactSwitch', false);
+  Session.setDefault('challengeToggle', false)
+  Session.setDefault('solutionToggle', false)
 
   Template.navbar.helpers({
 
@@ -346,12 +348,56 @@ if (Meteor.isClient) {
     },
     'mouseleave .descriptionsContainer': function(){
       $('#soWhat').animate({'fontSize': "30px"})
+    },
+    'mouseenter #challenge': function(){
+      $('#moreChallenge').css('opacity', 0.35);
+    },
+    'mouseleave #challenge': function(){
+      $('#moreChallenge').css('opacity', 0);
+    },
+    'mouseenter #solution': function(){
+      $('#moreSolution').css('opacity', 0.35);
+    },
+    'mouseleave #solution': function(){
+      $('#moreSolution').css('opacity', 0);
+    },
+    'click #moreChallenge': function(){
+      if(!Session.get('challengeToggle')){
+        $('#challengeContent')[0].innerText = Session.get('currentProject').allData.content.problem;
+        Session.set('challengeToggle', !Session.get('challengeToggle'))
+      } else {
+        $('#challengeContent')[0].innerText = Session.get('currentProject').allData.content.problem.split(' ').slice(0, 8).join(' ')+'...';
+        Session.set('challengeToggle', !Session.get('challengeToggle'))
+      }
+    },
+    'click #moreSolution': function(){
+      if(!Session.get('solutionToggle')){
+        var el = $('#solutionContent');
+        console.log(el);
+        $('#solutionContent')[0].innerText = Session.get('currentProject').allData.content.solution;
+        Session.set('solutionToggle', !Session.get('solutionToggle'))
+      } else {
+        $('#solutionContent')[0].innerText = Session.get('currentProject').allData.content.solution.split(' ').slice(0, 8).join(' ')+"...";
+        Session.set('solutionToggle', !Session.get('solutionToggle'))
+      }
     }
   })
 
   Template.singleProject.helpers({
     data: function(){
       return Session.get('currentProject');
+    },
+    shortChallenge: function(){
+      var full =  Session.get('currentProject').allData.content.problem;
+      var short = full.split(' ').slice(0, 8).join(' ');
+      console.log(short);
+      return short + "...";
+    },
+    shortSolution: function(){
+      var full =  Session.get('currentProject').allData.content.solution;
+      var short = full.split(' ').slice(0, 8).join(' ');
+      console.log(short);
+      return short + "...";
     },
     photoThumbs: function(){
       var photoArray = Session.get('singlePhotosArray');

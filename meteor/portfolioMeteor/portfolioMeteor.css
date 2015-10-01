@@ -534,8 +534,8 @@ li {
 
 #challenge {
   background-color: #92E2E7;
-  height: 230px;
-  padding: 2px 0 0 10px;
+  height: 100%;
+  padding: 2px 0 0 0px;
   margin: 40px 0 0 0;
 }
 
@@ -599,6 +599,23 @@ li {
 
 }
 
+#moreChallenge{
+  color: white;
+  background-color: purple;
+  height: 30%;
+  font-size: 24px;
+  text-align: center;
+  opacity: 0;
+}
+#moreSolution{
+  color: white;
+  background-color: purple;
+  height: 30%;
+  font-size: 24px;
+  text-align: center;
+  opacity: 0;
+}
+
 #morePhotos {
   margin: -275px 0 0 72.3%;
   background-color: #0B2161;
@@ -654,4 +671,5 @@ li {
 
 
 #titleDescription{
+  font-size: 25px
 }
