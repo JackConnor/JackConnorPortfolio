@@ -374,7 +374,8 @@ if (Meteor.isClient) {
       if(!Session.get('solutionToggle')){
         var el = $('#solutionContent');
         console.log(el);
-        $('#solutionContent')[0].innerText = Session.get('currentProject').allData.content.solution;
+        console.log(el[0].innerText);
+        el[0].innerText = Session.get('currentProject').allData.content.solution;
         Session.set('solutionToggle', !Session.get('solutionToggle'))
       } else {
         $('#solutionContent')[0].innerText = Session.get('currentProject').allData.content.solution.split(' ').slice(0, 8).join(' ')+"...";
