@@ -287,6 +287,10 @@ li {
   width: 100%;
 }
 
+.jackTitle h1 {
+  margin-left: 10%;
+}
+
 .links {
   height: 350px;
   background-color: pink;
@@ -531,6 +535,13 @@ li {
 }
 
 /* begin id elements */
+#aboutJackContentTech {
+  font-size: 22px;
+  font-weight: bold;
+  width: 80%;
+  margin-left: 10%;
+}
+
 #catProjectContainer {
   /*outline: 1px solid gray;*/
 }
