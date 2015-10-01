@@ -146,17 +146,21 @@ li {
 
 .contactJackContainer{
   height: 150px;
-  outline: 2px solid turquoise;
   position: relative;
 }
 
 .contactJackButton {
+  background-color: #C494B5;
   width: 60%;
   height: 100px;
   margin: 25px 0 0 20%;
-  outline: 2px solid tomato;
   position: absolute;
   text-align: center;
+}
+
+.contactJackButton:hover {
+  background-color: #C28C8C;
+  outline: 8px solid white;
 }
 
 .contactJackButton h1 {

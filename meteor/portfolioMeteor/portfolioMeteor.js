@@ -32,16 +32,18 @@ if (Meteor.isClient) {
       Session.set('singleCounter', false);
       Session.set('numero', true);
       Session.set('contactSwitch', false);
+      $('html, body').animate({
+        scrollTop: $(".projectscontainer").offset().top
+      }, 700);
     },
     'click #about': function(){
       Session.set('singleCounter', false);
       Session.set('numero', true);
       Session.set('contactSwitch', false);
       console.log('sessions should be set');
-      console.log($("#test"));
       $('html, body').animate({
-        scrollTop: $("#test").offset().top
-      }, 2000);
+        scrollTop: $(".aboutJackContainer").offset().top
+      }, 700);
     },
     'click .siteTitle': function(){
       Session.set('singleCounter', false);
@@ -62,6 +64,9 @@ if (Meteor.isClient) {
       Session.set('singleCounter', false);
       Session.set('numero', false);
       Session.set('contactSwitch', true);
+      $('html, body').animate({
+        scrollTop: $(".contactContainer").offset().top
+      }, 700);
     }
   })
 
@@ -175,6 +180,16 @@ if (Meteor.isClient) {
 
       }
       Session.set('singleCounter', !Session.get('singleCounter'));
+    },
+    'click .contactJackButton': function(){
+      Session.set('singleCounter', false);
+      Session.set('numero', false);
+      Session.set('contactSwitch', true);
+      setTimeout(function(){
+        $('html, body').animate({
+          scrollTop: $(".contactContainer").offset().top
+        }, 700);
+      }, 300);
     },
     'mouseenter .projectPhoto':function(evt){
       var target = $(evt.target);
