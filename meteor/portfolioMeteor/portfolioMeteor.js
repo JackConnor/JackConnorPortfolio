@@ -353,13 +353,13 @@ if (Meteor.isClient) {
       $('#moreChallenge').css('opacity', 0.35);
     },
     'mouseleave #challenge': function(){
-      $('#moreChallenge').css('opacity', 0);
+      $('#moreChallenge').css('opacity', .1);
     },
     'mouseenter #solution': function(){
       $('#moreSolution').css('opacity', 0.35);
     },
     'mouseleave #solution': function(){
-      $('#moreSolution').css('opacity', 0);
+      $('#moreSolution').css('opacity', .1);
     },
     'click #moreChallenge': function(){
       if(!Session.get('challengeToggle')){
