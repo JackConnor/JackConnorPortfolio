@@ -143,6 +143,26 @@ li {
   height: 100%;
 }
 
+.contactJackContainer{
+  height: 150px;
+  outline: 2px solid turquoise;
+  position: relative;
+}
+
+.contactJackButton {
+  width: 60%;
+  height: 100px;
+  margin: 25px 0 0 20%;
+  outline: 2px solid tomato;
+  position: absolute;
+  text-align: center;
+}
+
+.contactJackButton h1 {
+  font-size: 30px;
+  margin-top: 28px;
+}
+
 .currentPhoto{
   outline: 10px solid gray;
   width: 80%;
