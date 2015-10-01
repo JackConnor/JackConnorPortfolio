@@ -363,21 +363,25 @@ if (Meteor.isClient) {
     },
     'click #challenge': function(){
       if(!Session.get('challengeToggle')){
+        $('#moreChallenge')[0].innerText = "Click to Close"
         $('#challengeContent')[0].innerText = Session.get('currentProject').allData.content.problem;
         Session.set('challengeToggle', !Session.get('challengeToggle'))
       } else {
+        $('#moreChallenge')[0].innerText = "Click for More Info"
         $('#challengeContent')[0].innerText = Session.get('currentProject').allData.content.problem.split(' ').slice(0, 8).join(' ')+'...';
         Session.set('challengeToggle', !Session.get('challengeToggle'))
       }
     },
     'click #solution': function(){
       if(!Session.get('solutionToggle')){
+        $('#moreSolution')[0].innerText = "Click to Close";
         var el = $('#solutionContent');
         console.log(el);
         console.log(el[0].innerText);
         el[0].innerText = Session.get('currentProject').allData.content.solution;
         Session.set('solutionToggle', !Session.get('solutionToggle'))
       } else {
+        $('#moreSolution')[0].innerText = "Click for More Info";
         $('#solutionContent')[0].innerText = Session.get('currentProject').allData.content.solution.split(' ').slice(0, 8).join(' ')+"...";
         Session.set('solutionToggle', !Session.get('solutionToggle'))
       }
