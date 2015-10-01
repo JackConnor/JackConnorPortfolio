@@ -28,6 +28,11 @@ if (Meteor.isClient) {
   });
 
   Template.navbar.events({
+    'click #allProjects': function(){
+      Session.set('singleCounter', false);
+      Session.set('numero', true);
+      Session.set('contactSwitch', false);
+    },
     'click .siteTitle': function(){
       Session.set('singleCounter', false);
       Session.set('numero', true);
