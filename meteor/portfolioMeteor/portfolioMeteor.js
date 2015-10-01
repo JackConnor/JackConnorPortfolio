@@ -361,7 +361,7 @@ if (Meteor.isClient) {
     'mouseleave #solution': function(){
       $('#moreSolution').css('opacity', .1);
     },
-    'click #moreChallenge': function(){
+    'click #challenge': function(){
       if(!Session.get('challengeToggle')){
         $('#challengeContent')[0].innerText = Session.get('currentProject').allData.content.problem;
         Session.set('challengeToggle', !Session.get('challengeToggle'))
@@ -370,7 +370,7 @@ if (Meteor.isClient) {
         Session.set('challengeToggle', !Session.get('challengeToggle'))
       }
     },
-    'click #moreSolution': function(){
+    'click #solution': function(){
       if(!Session.get('solutionToggle')){
         var el = $('#solutionContent');
         console.log(el);

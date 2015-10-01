@@ -150,11 +150,46 @@
             </div>
           </div>
         </div>
+        <div class="linksContainer">
+          <a href="{{data.allData.links.live}}" target="_blank">
+            <div class="live">
+              <h2>Go to Website</h2>
+              <p id='hiddenTitle'>See this Live</p>
+
+            </div>
+          </a>
+          <a href="{{data.allData.links.github}}" target="_blank">
+            <div class="github">
+              <h2>Go to Github</h2>
+              <p id='hiddenDesc'>See the Code</p>
+            </div>
+          </a>
+        </div>
       </div>
+
       <!-- end video/photo spieler thingy -->
       <div id="project_info" class="col-sm-6 col-xs-12">
         <div class='singleTitle'>
           <h1 id='titleTitle'>{{data.allData.name}}</h1>
+        </div>
+        <div class="descriptionsContainer">
+          <h2 id='soWhat'>So, what is {{data.allData.name}}?</h2>
+          <div class="techStack">
+            <div class="techList">
+              <div class="tech">
+                >{{technologies.first}}
+              </div>
+              <div class="tech">
+                >{{technologies.second}}
+              </div>
+              <div class="tech">
+                >{{technologies.third}}
+              </div>
+            </div>
+          </div>
+          <p id='soWhatContent'>
+            {{data.allData.content.long}}
+          </p>
         </div>
         <div id="challenge">
           <h2 id="challengeTitle">The Challenge:</h2><p id='challengeContent'>{{shortChallenge}}</p>
@@ -176,7 +211,7 @@
   <div class="bottom_container container-fluid">
     <div class="row">
       <div class="col-sm-6 col-xs-12">
-        <div class="linksContainer">
+        <!-- <div class="linksContainer">
           <a href="{{data.allData.links.live}}" target="_blank">
             <div class="live">
               <h2>Go to Website</h2>
@@ -190,10 +225,10 @@
               <p id='hiddenDesc'>See the Code</p>
             </div>
           </a>
-        </div>
+        </div> -->
       </div>
       <div class="col-sm-6 col-xs-12">
-        <div class="descriptionsContainer">
+        <!-- <div class="descriptionsContainer">
           <h2 id='soWhat'>So, what is {{data.allData.name}}?</h2>
           <p id='soWhatContent'>
             {{data.allData.content.long}}
@@ -212,7 +247,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
