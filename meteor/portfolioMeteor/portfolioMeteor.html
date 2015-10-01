@@ -39,12 +39,18 @@
           <div class="navButtons">
             <div class="row">
               <div>
+                <div id="allProjects" class="button col-sm-3 col-xs-6">
+                  <p>All Projects</p>
+                </div>
+                <div id="about" class="button col-sm-3 col-xs-6">
+                  <p>About Jack</p>
+                </div>
                 <a href="https://www.github.com/jackconnor" target="_blank">
-                  <div class="button col-sm-6 col-xs-6">
+                  <div class="button col-sm-3 col-xs-6">
                     <p>My Github</p>
                   </div>
                 </a>
-                <div id="contact" class="button col-sm-6 col-xs-6">
+                <div id="contact" class="button col-sm-3 col-xs-6">
                   <p>Contact</p>
                 </div>
               </div>
@@ -281,6 +287,7 @@
       {{/each}}
     </div>
   </div>
+  {{>aboutJack}}
   {{/if}}
 </template>
 
@@ -323,8 +330,35 @@
   </div>
 </template>
 
+<template name="aboutJack">
+  <div class="aboutJackContainer">
+    <div class="row">
+      <div class="jackPhotoSection col-md-6 col-md-offset-0 col-xs-8 col-xs-offset-2">
+        <div class="jackPhotoContainer">
+          <img src="http://s23.postimg.org/vyhrk8lgb/jack_Cover.jpg" alt="" />
+        </div>
+      </div>
+      <div class="jackTechInfoSection col-md-6 col-md-offset-0 col-xs-8 col-xs-offset-2">
+        <div class="jackTitle">
+          <h1>About Jack</h1>
+          <p id='aboutJackContentTech'>
+            stuff about Jack etc etc stuff about Jack etc etc stuff about Jack etc etc stuff about Jack etc etc stuff about Jack etc etc stuff about Jack etc etc stuff about Jack etc etc stuff about Jack etc etc stuff about Jack etc etc stuff about Jack etc etc
+          </p>
+        </div>
+        <div class="techStack">
+          <div class="tech">Node.js</div>
+          <div class="tech">Angular</div>
+          <div class="tech">Javascript</div>
+          <div class="tech">MongoDB</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <template name="footer">
   <div class="footerContainer">
+    <div id='test'></div>
     <div class="row footerLinks">
       <div class="col-sm-4 col-xs-12">
         <h4>&middot;jack.connor83@gmail.com&middot;</h4>

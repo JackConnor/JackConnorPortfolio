@@ -33,6 +33,10 @@ li {
   text-align: center;
 }
 
+.aboutJackContainer {
+  outline: 2px solid aqua;
+}
+
 .appContainer {
   width: 100%;
   background-color: #CADCDE;
@@ -66,7 +70,7 @@ li {
   border-right: 5px solid #98DFE3;
   text-align: center;
   color: #525252;
-  font-size: 22px;
+  font-size: 18px;
   margin: 0 0 4px 0;
 }
 
@@ -267,6 +271,24 @@ li {
 
 .introContainer {
   height: 100%
+}
+
+.jackPhotoSection {
+  outline: 2px solid green;
+}
+
+.jackPhotoContainer {
+  outline: 2px solid yellow;
+  width: 75%;
+  margin: 20px auto 0 auto;
+}
+
+.jackPhotoContainer img{
+  width: 100%;
+}
+
+.jackTitle h1 {
+  margin-left: 10%;
 }
 
 .links {
@@ -513,6 +535,13 @@ li {
 }
 
 /* begin id elements */
+#aboutJackContentTech {
+  font-size: 22px;
+  font-weight: bold;
+  width: 80%;
+  margin-left: 10%;
+}
+
 #catProjectContainer {
   /*outline: 1px solid gray;*/
 }

@@ -28,6 +28,21 @@ if (Meteor.isClient) {
   });
 
   Template.navbar.events({
+    'click #allProjects': function(){
+      Session.set('singleCounter', false);
+      Session.set('numero', true);
+      Session.set('contactSwitch', false);
+    },
+    'click #about': function(){
+      Session.set('singleCounter', false);
+      Session.set('numero', true);
+      Session.set('contactSwitch', false);
+      console.log('sessions should be set');
+      console.log($("#test"));
+      $('html, body').animate({
+        scrollTop: $("#test").offset().top
+      }, 2000);
+    },
     'click .siteTitle': function(){
       Session.set('singleCounter', false);
       Session.set('numero', true);
