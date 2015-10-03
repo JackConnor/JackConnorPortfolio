@@ -7,6 +7,7 @@ a {
 
 body {
   font-family: 'futura';
+  
 }
 
 a:hover {
@@ -34,7 +35,8 @@ li {
 }
 
 .aboutJackContainer {
-  outline: 2px solid aqua;
+  border-top: 10px dashed #ADDDD0;
+  margin-top: 50px;
 }
 
 .appContainer {
@@ -141,6 +143,30 @@ li {
 .contactContainer {
   height: 400px;
   height: 100%;
+}
+
+.contactJackContainer{
+  height: 150px;
+  position: relative;
+}
+
+.contactJackButton {
+  background-color: #C494B5;
+  width: 60%;
+  height: 100px;
+  margin: 25px 0 0 20%;
+  position: absolute;
+  text-align: center;
+}
+
+.contactJackButton:hover {
+  background-color: #C28C8C;
+  outline: 8px solid white;
+}
+
+.contactJackButton h1 {
+  font-size: 30px;
+  margin-top: 28px;
 }
 
 .currentPhoto{
@@ -274,11 +300,11 @@ li {
 }
 
 .jackPhotoSection {
-  outline: 2px solid green;
+  margin-top: 40px;
 }
 
 .jackPhotoContainer {
-  outline: 2px solid yellow;
+  outline: 12px solid #B1B1B1;
   width: 75%;
   margin: 20px auto 0 auto;
 }
@@ -287,8 +313,23 @@ li {
   width: 100%;
 }
 
+.jackTechInfoSection {
+  margin-top: 30px;
+}
+
+.jackTitle {
+  background-color: #CAD1D0;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
 .jackTitle h1 {
   margin-left: 10%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 46px;
 }
 
 .links {
@@ -540,6 +581,14 @@ li {
   font-weight: bold;
   width: 80%;
   margin-left: 10%;
+  margin-top: 30px;
+  background-color: #BDE2E3;
+  padding: 15px
+}
+
+#aboutJackStack {
+  margin-top: 0px;
+  background-color: #8FDBCC;
 }
 
 #catProjectContainer {
