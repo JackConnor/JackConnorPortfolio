@@ -225,7 +225,7 @@ if (Meteor.isClient) {
     'mouseleave .popout': function(evt){
       var textBlurb = $(evt.target);
       textBlurb.css({
-        opacity: 0
+        opacity: 0 
       });
     }
   })
