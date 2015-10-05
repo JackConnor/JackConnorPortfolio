@@ -1,7 +1,7 @@
 
 
 
-if (Meteor.isServer){ 
+if (Meteor.isServer){
 
 }
 
@@ -31,6 +31,7 @@ if (Meteor.isClient) {
     'click #allProjects': function(){
       Session.set('singleCounter', false);
       Session.set('numero', true);
+      
       Session.set('contactSwitch', false);
       $('html, body').animate({
         scrollTop: $(".projectscontainer").offset().top
