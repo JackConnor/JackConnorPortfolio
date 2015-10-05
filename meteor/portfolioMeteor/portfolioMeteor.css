@@ -2,12 +2,12 @@
 /* begin html elements */
 
 a {
-  text-decoration: none;
+  text-decoration: none; 
 }
 
 body {
   font-family: 'futura';
-  
+
 }
 
 a:hover {
