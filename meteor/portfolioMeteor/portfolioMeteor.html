@@ -1,7 +1,7 @@
 <head>
   <title>Jack Connor Portfolio</title>
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    <link rel="stylesheet " href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">  
+    <link rel="stylesheet " href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
 <!--<![endif]-->
 </head>
 <body>
@@ -400,7 +400,9 @@
 
 <template name="introHolder">
   {{#if counter}}
-    {{> intro}}
+    {{#if secondCounter}}
+      {{> intro}}
+    {{/if}}
   {{else}}
     {{> bodyHolder}}
   {{/if}}
