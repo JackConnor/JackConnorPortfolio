@@ -31,7 +31,7 @@ if (Meteor.isClient) {
     'click #allProjects': function(){
       Session.set('singleCounter', false);
       Session.set('numero', true);
-      
+
       Session.set('contactSwitch', false);
       $('html, body').animate({
         scrollTop: $(".projectscontainer").offset().top
@@ -478,7 +478,7 @@ if (Meteor.isClient) {
 
   Template.introHolder.helpers({
     counter: function(){
-      return Session.get('introCounter')
+      return Session.get('introCounter');
     }
   })
 
