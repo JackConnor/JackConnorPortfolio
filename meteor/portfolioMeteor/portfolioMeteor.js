@@ -479,14 +479,6 @@ if (Meteor.isClient) {
   Template.introHolder.helpers({
     counter: function(){
       return Session.get('introCounter');
-    },
-    secondCounter: function(){
-      if(Session.get('introCounter')){
-        setTimeout(function(){
-          Session.set('introCounter', !Session.get('introCounter'));
-          return Session.get('introCounter')
-        }, 2000)
-      }
     }
   })
 
